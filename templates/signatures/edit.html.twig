@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Signatures{% endblock %}
+
+{% block body %}
+    <h1>Edit Signatures</h1>
+
+    {{ include('signatures/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('signatures_index') }}">back to list</a>
+
+    {{ include('signatures/_delete_form.html.twig') }}
+{% endblock %}

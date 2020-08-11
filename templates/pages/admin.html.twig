@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+    <br>
+    hi from admin panel <br>
+
+    <div class="nav flex-column col-2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('business_index') }}">Business Index</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('post_index') }}">Posts Index</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('signatures_index') }}">Signatures Index</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Success Story Index</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Users Index? SuperAdmin only</a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post index{% endblock %}
+
+{% block body %}
+    <h1>Post index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>DatePublished</th>
+                <th>AuthorFn</th>
+                <th>AuthorLn</th>
+                <th>ImageMain</th>
+                <th>ImageMiddle</th>
+                <th>ImageBottom</th>
+                <th>Excerpt</th>
+                <th>IntroText</th>
+                <th>MainText</th>
+                <th>OutroText</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.subtitle }}</td>
+                <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
+                <td>{{ post.authorFn }}</td>
+                <td>{{ post.authorLn }}</td>
+                <td>{{ post.imageMain }}</td>
+                <td>{{ post.imageMiddle }}</td>
+                <td>{{ post.imageBottom }}</td>
+                <td>{{ post.excerpt }}</td>
+                <td>{{ post.introText }}</td>
+                <td>{{ post.mainText }}</td>
+                <td>{{ post.outroText }}</td>
+                <td>
+                    <a href="{{ path('post_show', {'id': post.id}) }}">show</a>
+                    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('post_new') }}">Create new</a><br>
+    <a href="{{ path('admin') }}">Back to admin panel</a>
+{% endblock %}
