@@ -24,7 +24,7 @@ class SignatoryType extends AbstractType
             ->add('zipcode')
             ->add('city')
             ->add('country')
-//            ->add('fkCause', HiddenType::class, ['attr' => ['value' => 1]])
+            ->add('fkCause', HiddenType::class)
             /**todo
              * pass the value - cause id
              */

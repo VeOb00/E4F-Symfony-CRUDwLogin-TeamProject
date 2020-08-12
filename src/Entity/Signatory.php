@@ -99,12 +99,9 @@ class Signatory
     private $country;
 
     /**
-     * @var \Cause
+     * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Cause")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_cause", referencedColumnName="id")
-     * })
+     * @ORM\Column(name="fk_cause", type="integer")
      */
     private $fkCause;
 
@@ -247,12 +244,12 @@ class Signatory
         return $this;
     }
 
-    public function getFkCause(): ?Cause
+    public function getFkCause(): Int
     {
         return $this->fkCause;
     }
 
-    public function setFkCause(?Cause $fkCause): self
+    public function setFkCause(Int $fkCause): self
     {
         $this->fkCause = $fkCause;
 
