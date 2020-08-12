@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Signatory index{% endblock %}
+
+{% block body %}
+    <h1>Signatory index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>DocumentType</th>
+                <th>Number</th>
+                <th>FName</th>
+                <th>LName</th>
+                <th>Dob</th>
+                <th>PlaceOb</th>
+                <th>Nationality</th>
+                <th>Address</th>
+                <th>Zipcode</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for signatory in signatories %}
+            <tr>
+                <td>{{ signatory.id }}</td>
+                <td>{{ signatory.documentType }}</td>
+                <td>{{ signatory.number }}</td>
+                <td>{{ signatory.fName }}</td>
+                <td>{{ signatory.lName }}</td>
+                <td>{{ signatory.dob ? signatory.dob|date('Y-m-d') : '' }}</td>
+                <td>{{ signatory.placeOb }}</td>
+                <td>{{ signatory.nationality }}</td>
+                <td>{{ signatory.address }}</td>
+                <td>{{ signatory.zipcode }}</td>
+                <td>{{ signatory.city }}</td>
+                <td>{{ signatory.country }}</td>
+                <td>
+                    <a href="{{ path('signatory_show', {'id': signatory.id}) }}">show</a>
+                    <a href="{{ path('signatory_edit', {'id': signatory.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('signatory_new') }}">Create new</a>
+{% endblock %}

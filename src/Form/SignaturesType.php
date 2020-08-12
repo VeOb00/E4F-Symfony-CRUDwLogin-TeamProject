@@ -12,7 +12,7 @@ class SignaturesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fkPost')
+            ->add('fkCause')
             ->add('fkSignatory')
         ;
     }

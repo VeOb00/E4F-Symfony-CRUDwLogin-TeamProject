@@ -15,7 +15,8 @@ create table T6_Entrepreneurs.post
     excerpt        varchar(500),
     intro_text     mediumtext,
     main_text      mediumtext,
-    outro_text     mediumtext
+    outro_text     mediumtext,
+    post_type      varchar(50) not null
 );
 
 
@@ -81,11 +82,23 @@ create table T6_Entrepreneurs.signatory
     country       varchar(50) not null
 );
 
+create table T6_Entrepreneurs.cause
+(
+    id          int not null auto_increment primary key,
+    title       varchar(250),
+    subtitle    varchar(250),
+    excerpt     varchar(1000),
+    image       varchar(250),
+    description mediumtext,
+    date_start  date,
+    date_end    date
+);
+
 create table T6_Entrepreneurs.signatures
 (
     id           int not null auto_increment primary key,
-    fk_post      int not null,
+    fk_cause     int not null,
     fk_signatory int not null,
-    foreign key (fk_post) references T6_Entrepreneurs.post (id),
+    foreign key (fk_cause) references T6_Entrepreneurs.cause (id),
     foreign key (fk_signatory) references T6_Entrepreneurs.signatory (id)
-)
+);

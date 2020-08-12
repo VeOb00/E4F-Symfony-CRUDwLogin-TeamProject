@@ -24,6 +24,7 @@ class PostType extends AbstractType
             ->add('introText')
             ->add('mainText')
             ->add('outroText')
+            ->add('post_type')
         ;
     }
 

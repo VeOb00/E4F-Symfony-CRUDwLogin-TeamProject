@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Signatures
  *
- * @ORM\Table(name="signatures", indexes={@ORM\Index(name="fk_post", columns={"fk_post"}), @ORM\Index(name="fk_signatory", columns={"fk_signatory"})})
+ * @ORM\Table(name="signatures", indexes={@ORM\Index(name="fk_cause", columns={"fk_cause"}), @ORM\Index(name="fk_signatory", columns={"fk_signatory"})})
  * @ORM\Entity
  */
 class Signatures
@@ -22,14 +22,14 @@ class Signatures
     private $id;
 
     /**
-     * @var \Post
+     * @var \Cause
      *
-     * @ORM\ManyToOne(targetEntity="Post")
+     * @ORM\ManyToOne(targetEntity="Cause")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_post", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="fk_cause", referencedColumnName="id")
      * })
      */
-    private $fkPost;
+    private $fkCause;
 
     /**
      * @var \Signatory
@@ -40,35 +40,6 @@ class Signatures
      * })
      */
     private $fkSignatory;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getFkPost(): ?Post
-    {
-        return $this->fkPost;
-    }
-
-    public function setFkPost(?Post $fkPost): self
-    {
-        $this->fkPost = $fkPost;
-
-        return $this;
-    }
-
-    public function getFkSignatory(): ?Signatory
-    {
-        return $this->fkSignatory;
-    }
-
-    public function setFkSignatory(?Signatory $fkSignatory): self
-    {
-        $this->fkSignatory = $fkSignatory;
-
-        return $this;
-    }
 
 
 }

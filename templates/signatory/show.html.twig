@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Signatory{% endblock %}
+
+{% block body %}
+    <h1>Signatory</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ signatory.id }}</td>
+            </tr>
+            <tr>
+                <th>DocumentType</th>
+                <td>{{ signatory.documentType }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ signatory.number }}</td>
+            </tr>
+            <tr>
+                <th>FName</th>
+                <td>{{ signatory.fName }}</td>
+            </tr>
+            <tr>
+                <th>LName</th>
+                <td>{{ signatory.lName }}</td>
+            </tr>
+            <tr>
+                <th>Dob</th>
+                <td>{{ signatory.dob ? signatory.dob|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>PlaceOb</th>
+                <td>{{ signatory.placeOb }}</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>{{ signatory.nationality }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ signatory.address }}</td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td>{{ signatory.zipcode }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ signatory.city }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ signatory.country }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('signatory_index') }}">back to list</a>
+
+    <a href="{{ path('signatory_edit', {'id': signatory.id}) }}">edit</a>
+
+    {{ include('signatory/_delete_form.html.twig') }}
+{% endblock %}

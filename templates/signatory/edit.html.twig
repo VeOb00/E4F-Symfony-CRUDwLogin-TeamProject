@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Signatory{% endblock %}
+
+{% block body %}
+    <h1>Edit Signatory</h1>
+
+    {{ include('signatory/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('signatory_index') }}">back to list</a>
+
+    {{ include('signatory/_delete_form.html.twig') }}
+{% endblock %}
