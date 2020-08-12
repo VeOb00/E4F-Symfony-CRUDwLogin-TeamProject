@@ -1284,6 +1284,7 @@
     <column id="398" parent="355" name="post_type">
       <Position>14</Position>
       <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <key id="399" parent="355" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1296,133 +1297,147 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="401" parent="356" name="document_type">
+    <column id="401" parent="356" name="fk_cause">
       <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="402" parent="356" name="number">
+    <column id="402" parent="356" name="document_type">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="403" parent="356" name="f_name">
+    <column id="403" parent="356" name="number">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="404" parent="356" name="l_name">
+    <column id="404" parent="356" name="f_name">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="405" parent="356" name="dob">
+    <column id="405" parent="356" name="l_name">
       <Position>6</Position>
-      <DataType>date|0s</DataType>
-    </column>
-    <column id="406" parent="356" name="place_ob">
-      <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="407" parent="356" name="nationality">
-      <Position>8</Position>
-      <DataType>varchar(250)|0s</DataType>
+    <column id="406" parent="356" name="dob">
+      <Position>7</Position>
+      <DataType>date|0s</DataType>
     </column>
-    <column id="408" parent="356" name="address">
+    <column id="407" parent="356" name="place_ob">
+      <Position>8</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="408" parent="356" name="nationality">
       <Position>9</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <column id="409" parent="356" name="zipcode">
+    <column id="409" parent="356" name="address">
       <Position>10</Position>
+      <DataType>varchar(250)|0s</DataType>
+    </column>
+    <column id="410" parent="356" name="zipcode">
+      <Position>11</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="410" parent="356" name="city">
-      <Position>11</Position>
-      <DataType>varchar(50)|0s</DataType>
-    </column>
-    <column id="411" parent="356" name="country">
+    <column id="411" parent="356" name="city">
       <Position>12</Position>
       <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="412" parent="356" name="country">
+      <Position>13</Position>
+      <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="412" parent="356" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="413" parent="357" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="414" parent="357" name="fk_cause">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="415" parent="357" name="fk_signatory">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="416" parent="357" name="fk_cause">
+    <index id="413" parent="356" name="fk_cause">
       <ColNames>fk_cause</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="417" parent="357" name="fk_signatory">
-      <ColNames>fk_signatory</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="418" parent="357" name="PRIMARY">
+    <key id="414" parent="356" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="419" parent="357" name="signatures_ibfk_1">
+    <foreign-key id="415" parent="356" name="signatory_ibfk_1">
       <ColNames>fk_cause</ColNames>
       <RefTableName>cause</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="420" parent="357" name="signatures_ibfk_2">
-      <ColNames>fk_signatory</ColNames>
-      <RefTableName>signatory</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="421" parent="358" name="id">
+    <column id="416" parent="357" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="422" parent="358" name="fk_post">
+    <column id="417" parent="357" name="fk_cause">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="423" parent="358" name="fk_business">
+    <column id="418" parent="357" name="fk_signatory">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="424" parent="358" name="fk_post">
-      <ColNames>fk_post</ColNames>
+    <index id="419" parent="357" name="fk_cause">
+      <ColNames>fk_cause</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="425" parent="358" name="fk_business">
-      <ColNames>fk_business</ColNames>
+    <index id="420" parent="357" name="fk_signatory">
+      <ColNames>fk_signatory</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="426" parent="358" name="PRIMARY">
+    <key id="421" parent="357" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="427" parent="358" name="stories_ibfk_1">
+    <foreign-key id="422" parent="357" name="signatures_ibfk_1">
+      <ColNames>fk_cause</ColNames>
+      <RefTableName>cause</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="423" parent="357" name="signatures_ibfk_2">
+      <ColNames>fk_signatory</ColNames>
+      <RefTableName>signatory</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="424" parent="358" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="425" parent="358" name="fk_post">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="426" parent="358" name="fk_business">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="427" parent="358" name="fk_post">
+      <ColNames>fk_post</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="428" parent="358" name="fk_business">
+      <ColNames>fk_business</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="429" parent="358" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="430" parent="358" name="stories_ibfk_1">
       <ColNames>fk_post</ColNames>
       <RefTableName>post</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="428" parent="358" name="stories_ibfk_2">
+    <foreign-key id="431" parent="358" name="stories_ibfk_2">
       <ColNames>fk_business</ColNames>
       <RefTableName>business</RefTableName>
       <RefColNames>id</RefColNames>

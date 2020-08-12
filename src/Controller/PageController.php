@@ -4,9 +4,16 @@
 namespace App\Controller;
 
 use App\Entity\Business;
+use App\Entity\Cause;
 use App\Entity\Post;
+use App\Entity\Signatory;
 use App\Entity\Signatures;
+use App\Form\SignatoryType;
+use App\Form\SignaturesType;
+use App\Repository\EventsRepository;
+use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -80,13 +87,50 @@ class PageController extends AbstractController
      */
     public function indexSignature(): Response
     {
-        $signatures = $this->getDoctrine()
-            ->getRepository(Signatures::class)
+        $causes = $this->getDoctrine()
+            ->getRepository(Cause::class)
             ->findAll();
 
         return $this->render('pages/signatures.html.twig', [
-            'signatures' => $signatures,
+            'causes' => $causes,
         ]);
+    }
+
+    /**
+     * @Route("sign/{id}", name="sign_show", methods={"GET","POST"})
+     */
+    public function showSignatures(Cause $cause, Request $request): Response
+    {
+//        return $this->render('pages/singlepages/showsignatures.html.twig', [
+//            'cause' => $cause,
+//        ]);
+        $signatories = $this->getDoctrine()
+            ->getRepository(Signatory::class)
+            ->findAll();
+        $signatory = new Signatory();
+//        $cause = $this->getDoctrine()->getRepository(Cause::class)->find(id);
+        /**todo
+         * pass value to form builder
+         */
+        $form = $this->createForm(SignatoryType::class, $signatory);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+//            $entityManager->setCause($cause);
+            $entityManager->persist($signatory);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('sign_show');
+        }
+
+        return $this->render('pages/singlepages/showsignatures.html.twig', [
+            'cause' => $cause,
+            'signatory' => $signatory,
+            'form' => $form->createView(),
+            'signatories' => $signatories,
+        ]);
+
     }
 
     /**
@@ -114,5 +158,27 @@ class PageController extends AbstractController
     }
 
 
+    /**
+     * @Route("posts/{type}", name="post_type", methods={"GET"})
+     */
+    public function filterEvents(string $type, PostRepository $postsRepository): Response
+    {
 
+        $posts = $postsRepository->findAllByType($type);
+        $postTypes = $postsRepository->findAllByType('type');
+
+        return $this->render('pages/story.html.twig', [
+            'posts' => $posts,
+            'postTypes' => $postTypes
+        ]);
+    }
+    /**
+     * @Route("/posts/story/{id}", name="story_show", methods={"GET"})
+     */
+    public function showStory(Post $post): Response
+    {
+        return $this->render('pages/singlepages/showsinglesuccessstory.html.twig', [
+            'post' => $post,
+        ]);
+    }
 }

@@ -70,6 +70,8 @@ class Cause
      */
     private $dateEnd;
 
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -158,6 +160,7 @@ class Cause
 
         return $this;
     }
+
 
 
 }

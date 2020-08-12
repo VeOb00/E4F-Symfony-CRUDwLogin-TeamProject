@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Signatory;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -23,6 +24,10 @@ class SignatoryType extends AbstractType
             ->add('zipcode')
             ->add('city')
             ->add('country')
+//            ->add('fkCause', HiddenType::class, ['attr' => ['value' => 1]])
+            /**todo
+             * pass the value - cause id
+             */
         ;
     }
 
