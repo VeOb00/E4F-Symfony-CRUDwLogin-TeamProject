@@ -41,5 +41,34 @@ class Signatures
      */
     private $fkSignatory;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getFkCause(): ?Cause
+    {
+        return $this->fkCause;
+    }
+
+    public function setFkCause(?Cause $fkCause): self
+    {
+        $this->fkCause = $fkCause;
+
+        return $this;
+    }
+
+    public function getFkSignatory(): ?Signatory
+    {
+        return $this->fkSignatory;
+    }
+
+    public function setFkSignatory(?Signatory $fkSignatory): self
+    {
+        $this->fkSignatory = $fkSignatory;
+
+        return $this;
+    }
+
 
 }

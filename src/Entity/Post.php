@@ -112,5 +112,166 @@ class Post
      */
     private $postType;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getSubtitle(): ?string
+    {
+        return $this->subtitle;
+    }
+
+    public function setSubtitle(?string $subtitle): self
+    {
+        $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    public function getDatePublished(): ?\DateTimeInterface
+    {
+        return $this->datePublished;
+    }
+
+    public function setDatePublished(\DateTimeInterface $datePublished): self
+    {
+        $this->datePublished = $datePublished;
+
+        return $this;
+    }
+
+    public function getAuthorFn(): ?string
+    {
+        return $this->authorFn;
+    }
+
+    public function setAuthorFn(?string $authorFn): self
+    {
+        $this->authorFn = $authorFn;
+
+        return $this;
+    }
+
+    public function getAuthorLn(): ?string
+    {
+        return $this->authorLn;
+    }
+
+    public function setAuthorLn(?string $authorLn): self
+    {
+        $this->authorLn = $authorLn;
+
+        return $this;
+    }
+
+    public function getImageMain(): ?string
+    {
+        return $this->imageMain;
+    }
+
+    public function setImageMain(string $imageMain): self
+    {
+        $this->imageMain = $imageMain;
+
+        return $this;
+    }
+
+    public function getImageMiddle(): ?string
+    {
+        return $this->imageMiddle;
+    }
+
+    public function setImageMiddle(?string $imageMiddle): self
+    {
+        $this->imageMiddle = $imageMiddle;
+
+        return $this;
+    }
+
+    public function getImageBottom(): ?string
+    {
+        return $this->imageBottom;
+    }
+
+    public function setImageBottom(?string $imageBottom): self
+    {
+        $this->imageBottom = $imageBottom;
+
+        return $this;
+    }
+
+    public function getExcerpt(): ?string
+    {
+        return $this->excerpt;
+    }
+
+    public function setExcerpt(?string $excerpt): self
+    {
+        $this->excerpt = $excerpt;
+
+        return $this;
+    }
+
+    public function getIntroText(): ?string
+    {
+        return $this->introText;
+    }
+
+    public function setIntroText(?string $introText): self
+    {
+        $this->introText = $introText;
+
+        return $this;
+    }
+
+    public function getMainText(): ?string
+    {
+        return $this->mainText;
+    }
+
+    public function setMainText(?string $mainText): self
+    {
+        $this->mainText = $mainText;
+
+        return $this;
+    }
+
+    public function getOutroText(): ?string
+    {
+        return $this->outroText;
+    }
+
+    public function setOutroText(?string $outroText): self
+    {
+        $this->outroText = $outroText;
+
+        return $this;
+    }
+
+    public function getPostType(): ?string
+    {
+        return $this->postType;
+    }
+
+    public function setPostType(?string $postType): self
+    {
+        $this->postType = $postType;
+
+        return $this;
+    }
+
 
 }

@@ -41,5 +41,34 @@ class Stories
      */
     private $fkBusiness;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getFkPost(): ?Post
+    {
+        return $this->fkPost;
+    }
+
+    public function setFkPost(?Post $fkPost): self
+    {
+        $this->fkPost = $fkPost;
+
+        return $this;
+    }
+
+    public function getFkBusiness(): ?Business
+    {
+        return $this->fkBusiness;
+    }
+
+    public function setFkBusiness(?Business $fkBusiness): self
+    {
+        $this->fkBusiness = $fkBusiness;
+
+        return $this;
+    }
+
 
 }
