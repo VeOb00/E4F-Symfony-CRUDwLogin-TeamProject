@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 22px 6px;
+    border-bottom: none !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-inverse{
+    background-color: transparent !important;
+}
+
+.navbar ul li a{
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 13px;
+    transition: all 0.5s ease-in;
+}
+
+.navbar ul li a:hover{
+    color: deepskyblue !important;
+}
+
+.navbar-toggle{
+    border: 1px solid white !important;
+    transition: all 0.5s ease-in;
+}
+
+.navbar-toggle:hover{
+    background-color: deepskyblue !important;
+}
+
+.navbar-inverse .navbar-collapse{
+    border-color: transparent !important;
+} 
+
+.location{
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.slider{
+    width: 100%;
+    height: 700px;
+    background-image: url(https://www.unternehmensgruen.org/wp-content/uploads/2019/03/EFF_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.slider-overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    position: relative;
+}
+
+.slider-content{
+    position: absolute;
+    top:39%;
+    width: 100%;
+}
+
+
+.icons .fa{
+    font-size: 35px;
+    margin-right: 7px;
+}
+
+.cta-div{
+    margin-top: 30px;
+}
+
+
+
+
+
+.btn1{
+    padding: 13px 18px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border: 2px solid white;
+    border-top-left-radius: 15px; 
+    transition: all 0.5s ease-in;
+}
+
+.btn1:hover{
+    text-decoration: none;
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+}
+
+.btn2{
+    padding: 13px 18px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border: 2px solid white;
+    border-bottom-right-radius: 15px;
+    transition: all 0.5s ease-in;
+    margin-right: 10px;
+}
+
+.btn2:hover{
+    text-decoration: none;
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+}
+
+.social-networks a.fa{
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    margin-right: 2px;
+    transition: all 0.5s ease-in;
+}
+
+.social-networks a.fa:hover{
+    text-decoration: none;
+    background-color: deepskyblue;
+    color: white;
+    border: 1px solid deepskyblue;
+}
+
+/*-----ripple effect------*/
+
+.slider .text, .slider .typed-cursor{
+    display: inline;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+/*-----ripple ende-----*/
+
+.service-area{
+    margin-top: 30px;
+}
+
+.service-area p{
+   margin-bottom: -5px;
+}
+
+.service-wrap{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    padding: 25px 35px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    z-index: 9;
+    margin-top: 20px;
+}
+
+.service-wrap::before, .service-wrap::after{
+    content:"";
+    height: 300%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 120%;
+    z-index: -9;
+    transition: all 0.5s;
+    opacity: 0;
+    background: #34495e;
+}
+
+.service-wrap::before{
+    top:-37px;
+    left: 100%;
+}
+
+.service-wrap:hover:before{
+    left: -27px;
+    opacity: 1;
+}
+
+.service-wrap::after{
+    right:100%;
+   bottom:-37px;
+}
+
+.service-wrap:hover:after{
+    right:-27px;
+    opacity: 1;
+}
+
+.service-wrap:hover{
+   color: white;
+}
+
+.service-wrap:h3{
+   color: white;
+}
+
+.service-wrap:hover h3{
+   color: white;
+}
+
+.service-wrap:hover h3:after{
+  background-color: white;
+}
+
+.service-icon  i{
+    font-size: 30px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.service-wrap:hover .service-icon i{
+    transform: rotate(360deg);
+}
+
+.service-wrap h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.service-wrap p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/*----News section---*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
