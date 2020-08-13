@@ -13,17 +13,17 @@ class SignatoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('documentType')
-            ->add('number')
-            ->add('fName')
-            ->add('lName')
-            ->add('dob')
-            ->add('placeOb')
-            ->add('nationality')
-            ->add('address')
-            ->add('zipcode')
-            ->add('city')
-            ->add('country')
+            ->add('documentType', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Passport, ID or Drivers Licence:'])
+            ->add('number', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Identification number:'])
+            ->add('fName', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'First Name:'])
+            ->add('lName', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Last Name:'])
+            ->add('dob', DateType::class, ['help' => 'Optional', 'widget' => 'single_text', 'format' => 'yyyy-MM-dd', 'required' => false, 'label' => 'Date of Birth:'])
+            ->add('placeOb', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Place of Birth:'])
+            ->add('nationality', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Nationality:'])
+            ->add('address', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Address:'])
+            ->add('zipcode', IntegerType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Zip-Code:'])
+            ->add('city', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'City:'])
+            ->add('country', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Country:'])
             ->add('fkCause', HiddenType::class)
             /**todo
              * pass the value - cause id
