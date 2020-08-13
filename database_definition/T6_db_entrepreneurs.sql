@@ -57,14 +57,6 @@ create table T6_Entrepreneurs.business
 #     terms_conditions boolean
 # );
 
-create table T6_Entrepreneurs.stories
-(
-    id          int not null auto_increment primary key,
-    fk_post     int not null,
-    fk_business int not null,
-    foreign key (fk_post) references T6_Entrepreneurs.post (id),
-    foreign key (fk_business) references T6_Entrepreneurs.business (id)
-);
 
 create table T6_Entrepreneurs.cause
 (
@@ -94,15 +86,4 @@ create table T6_Entrepreneurs.signatory
     city          varchar(50),
     country       varchar(50) not null,
     foreign key (fk_cause) references T6_Entrepreneurs.cause (id)
-);
-
-
-
-create table T6_Entrepreneurs.signatures
-(
-    id           int not null auto_increment primary key,
-    fk_cause     int not null,
-    fk_signatory int not null,
-    foreign key (fk_cause) references T6_Entrepreneurs.cause (id),
-    foreign key (fk_signatory) references T6_Entrepreneurs.signatory (id)
 );
