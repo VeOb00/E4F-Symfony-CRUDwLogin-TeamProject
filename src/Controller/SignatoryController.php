@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Cause;
 use App\Entity\Signatory;
 use App\Form\SignatoryType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,11 +35,16 @@ class SignatoryController extends AbstractController
     public function new(Request $request): Response
     {
         $signatory = new Signatory();
+//        $cause = $this->getDoctrine()->getRepository(Cause::class)->find(id);
+        /**todo
+         * pass value to form builder
+         */
         $form = $this->createForm(SignatoryType::class, $signatory);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+//            $entityManager->setCause($cause);
             $entityManager->persist($signatory);
             $entityManager->flush();
 
@@ -47,7 +53,8 @@ class SignatoryController extends AbstractController
 
         return $this->render('signatory/new.html.twig', [
             'signatory' => $signatory,
-            'form' => $form->createView(),
+//            'cause' => $cause,
+            'form' => $form->createView()
         ]);
     }
 

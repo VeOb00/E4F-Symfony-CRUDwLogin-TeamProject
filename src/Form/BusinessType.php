@@ -6,7 +6,6 @@ use App\Entity\Business;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -28,11 +27,11 @@ class BusinessType extends AbstractType
             ->add('eMail', EmailType::class, ['help' => 'Optional', 'required' => false, 'label' => 'E-mail address:'])
             ->add('webpage', UrlType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Website:'])
             ->add('telNr', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Contact Tel. Nr.:'])
-            ->add('logo', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Company Logo:'])
-            ->add('image', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Teaser:'])
+            ->add('logo', UrlType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Company Logo url:'])
+            ->add('image', UrlType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Teaser Image url:'])
             ->add('description', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'About the company:'])
             ->add('moto', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Motto:'])
-            ->add('gmaploc', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Location:'])
+            ->add('gmaploc', TextType::class, ['help' => 'Optional, src link form google maps iframe', 'required' => false, 'label' => 'Location:'])
         ;
     }
 

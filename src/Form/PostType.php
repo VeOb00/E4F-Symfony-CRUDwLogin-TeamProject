@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -27,7 +28,7 @@ class PostType extends AbstractType
             ->add('introText', TextareaType::class, [ 'help' => 'Optional', 'required' => false, 'label' => 'Intro:'])
             ->add('mainText', TextareaType::class, [ 'help' => 'Optional', 'required' => false, 'label' => 'Main Text:'])
             ->add('outroText', TextareaType::class, [ 'help' => 'Optional', 'required' => false, 'label' => 'Outro:'])
-            ->add('post_type', TextareaType::class, [ 'help' => 'Optional', 'required' => false, 'label' => 'Type:'])
+            ->add('post_type', ChoiceType::class, [ 'help' => 'Required', 'required' => true, 'label' => 'Type:', 'choices' => ['news' => 'news', 'story' => 'story', 'strike' => 'strike']])
         ;
     }
 

@@ -16,7 +16,7 @@ create table T6_Entrepreneurs.post
     intro_text     mediumtext,
     main_text      mediumtext,
     outro_text     mediumtext,
-    post_type      varchar(50) not null
+    post_type      varchar(50)  not null
 );
 
 
@@ -66,22 +66,6 @@ create table T6_Entrepreneurs.stories
     foreign key (fk_business) references T6_Entrepreneurs.business (id)
 );
 
-create table T6_Entrepreneurs.signatory
-(
-    id            int         not null auto_increment primary key,
-    document_type varchar(50) not null,
-    number        varchar(50) not null,
-    f_name        varchar(50) not null,
-    l_name        varchar(50),
-    dob           date,
-    place_ob      varchar(50),
-    nationality   varchar(250),
-    address       varchar(250),
-    zipcode       int,
-    city          varchar(50),
-    country       varchar(50) not null
-);
-
 create table T6_Entrepreneurs.cause
 (
     id          int not null auto_increment primary key,
@@ -93,6 +77,26 @@ create table T6_Entrepreneurs.cause
     date_start  date,
     date_end    date
 );
+
+create table T6_Entrepreneurs.signatory
+(
+    id            int         not null auto_increment primary key,
+    fk_cause      int         not null,
+    document_type varchar(50) not null,
+    number        varchar(50) not null,
+    f_name        varchar(50) not null,
+    l_name        varchar(50),
+    dob           date,
+    place_ob      varchar(50),
+    nationality   varchar(250),
+    address       varchar(250),
+    zipcode       int,
+    city          varchar(50),
+    country       varchar(50) not null,
+    foreign key (fk_cause) references T6_Entrepreneurs.cause (id)
+);
+
+
 
 create table T6_Entrepreneurs.signatures
 (

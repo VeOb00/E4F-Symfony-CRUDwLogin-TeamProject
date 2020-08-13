@@ -1,27 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Signatures{% endblock %}
+{% block title %}Cause index{% endblock %}
 
 {% block body %}
-    <br>
-    this page might hold a list of petitions available to sign?
-    <br>
-
-
+    <h1>Cause index</h1>
 
     <table class="table">
         <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Subtitle</th>
-            <th>Excerpt</th>
-            <th>Image</th>
-            <th>Description</th>
-            <th>DateStart</th>
-            <th>DateEnd</th>
-            <th>actions</th>
-        </tr>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Excerpt</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>DateStart</th>
+                <th>DateEnd</th>
+                <th>actions</th>
+            </tr>
         </thead>
         <tbody>
         {% for cause in causes %}
@@ -35,7 +31,8 @@
                 <td>{{ cause.dateStart ? cause.dateStart|date('Y-m-d') : '' }}</td>
                 <td>{{ cause.dateEnd ? cause.dateEnd|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
+                    <a href="{{ path('cause_show', {'id': cause.id}) }}">show</a>
+                    <a href="{{ path('cause_edit', {'id': cause.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -46,6 +43,5 @@
         </tbody>
     </table>
 
-
-
+    <a href="{{ path('cause_new') }}">Create new</a>
 {% endblock %}

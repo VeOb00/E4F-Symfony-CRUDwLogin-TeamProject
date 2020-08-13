@@ -20,16 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/CauseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CauseType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cause/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/singlepages/showsignatures.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Business.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Business.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SignatoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SignatoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Cause.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cause.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Signatory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Signatory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Signatures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Signatures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Stories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Stories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BusinessType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BusinessType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SignatoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SignatoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/news.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/news.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/signatures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/signatures.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +161,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fzHW1R82e4Y75g52XAELaiF37f" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -167,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597214028505</updated>
-      <workItem from="1597214029662" duration="7894000" />
+      <workItem from="1597214029662" duration="31758000" />
     </task>
     <servers />
   </component>
@@ -194,25 +210,37 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="552" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215467026" />
-    <state width="1293" height="325" key="GridCell.Tab.0.bottom" timestamp="1597216248668">
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597247335926">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="325" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597216248668" />
-    <state width="1293" height="325" key="GridCell.Tab.0.center" timestamp="1597216248668">
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597247335926" />
+    <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1597247358373">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="325" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597216248668" />
-    <state width="1293" height="325" key="GridCell.Tab.0.left" timestamp="1597216248668">
+    <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597247358373" />
+    <state width="1293" height="325" key="GridCell.Tab.0.bottom" timestamp="1597233318562">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="325" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597216248668" />
-    <state width="1293" height="325" key="GridCell.Tab.0.right" timestamp="1597216248668">
+    <state width="1293" height="325" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597233318562" />
+    <state width="1293" height="325" key="GridCell.Tab.0.center" timestamp="1597233318562">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="325" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597216248668" />
+    <state width="1293" height="325" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597233318562" />
+    <state width="1293" height="325" key="GridCell.Tab.0.left" timestamp="1597233318562">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1293" height="325" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597233318562" />
+    <state width="1293" height="325" key="GridCell.Tab.0.right" timestamp="1597233318562">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1293" height="325" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597233318562" />
     <state width="273" height="457" key="HiddenNamespacesPopup" timestamp="1597215490928">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state width="273" height="457" key="HiddenNamespacesPopup/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215490928" />
+    <state x="589" y="308" key="NewPhpClassDialog" timestamp="1597246706065">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597246706065" />
   </component>
 </project>
