@@ -162,8 +162,16 @@
       <option name="presentableId" value="Default" />
       <updated>1597214028505</updated>
       <workItem from="1597214029662" duration="35266000" />
-      <workItem from="1597303277345" duration="11948000" />
+      <workItem from="1597303277345" duration="12335000" />
     </task>
+    <task id="LOCAL-00001" summary="merge">
+      <created>1597315684701</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597315684701</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +190,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="464" key="#Composer" timestamp="1597214043488">
