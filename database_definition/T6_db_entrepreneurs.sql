@@ -41,21 +41,14 @@ create table T6_Entrepreneurs.business
 );
 
 # created via symfony
-# create table T6_Entrepreneurs.users
-# (
-#     id               int not null auto_increment primary key,
-#     first_name       varchar(250),
-#     last_name        varchar(250),
-#     e_mail           varchar(250),
-#     password         varchar(500),
-#     status           varchar(20),
-#     date_of_birth    date,
-#     str_name_nr      varchar(250),
-#     city             varchar(50),
-#     zipcode          int,
-#     country          varchar(50),
-#     terms_conditions boolean
-# );
+CREATE TABLE `user` (
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
+                        `email` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+                        `roles` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json)',
+                        `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                        PRIMARY KEY (`id`),
+                        UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 create table T6_Entrepreneurs.cause

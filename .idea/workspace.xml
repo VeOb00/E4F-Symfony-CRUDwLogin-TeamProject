@@ -20,19 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SignaturesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Signatures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Stories.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SignaturesType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +147,8 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fzHW1R82e4Y75g52XAELaiF37f" />
@@ -174,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597214028505</updated>
       <workItem from="1597214029662" duration="35266000" />
-      <workItem from="1597303277345" duration="4350000" />
+      <workItem from="1597303277345" duration="11948000" />
     </task>
     <servers />
   </component>
