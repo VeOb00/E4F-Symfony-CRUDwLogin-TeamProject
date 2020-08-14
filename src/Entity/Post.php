@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -111,6 +112,122 @@ class Post
      * @ORM\Column(name="post_type", type="string", length=50, nullable=true)
      */
     private $postType;
+
+////    -------------------------------------------
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="strike_date_time", type="datetime", nullable=true)
+     */
+    private $strikeDate;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="strike_str_name_nr", type="string", length=250, nullable=true)
+     */
+    private $strikeAddress;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="strike_city", type="string", length=50, nullable=true)
+     */
+    private $strikeCity;
+
+    /**
+     * @var integer|null
+     *
+     * @ORM\Column(name="strike_zipcode", type="integer", nullable=true)
+     */
+    private $strikeZipcode;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="strike_country", type="string", length=50, nullable=true)
+     */
+    private $strikeCountry;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_logo", type="string", length=250, nullable=true)
+     */
+    private $businessLogo;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_name", type="string", length=250, nullable=true)
+     */
+    private $businessName;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_branch", type="string", length=250, nullable=true)
+     */
+    private $businessBranch;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_str_name_nr", type="string", length=250, nullable=true)
+     */
+    private $businessAddress;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_city", type="string", length=50, nullable=true)
+     */
+    private $businessCity;
+
+    /**
+     * @var integer|null
+     *
+     * @ORM\Column(name="b_zipcode", type="integer", nullable=true)
+     */
+    private $businessZipcode;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_country", type="string", nullable=true)
+     */
+    private $businessCountry;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_e_mail", type="string", nullable=true)
+     */
+    private $businessEmail;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_webpage", type="string", nullable=true)
+     */
+    private $businessWebpage;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_gmaploc", type="string", nullable=true)
+     */
+    private $businessLocation;
+
+
+//---------------------------------------
+    public function __construct()
+    {
+        $this->strikeDate = new \DateTime();
+    }
+
+
+
 
     public function getId(): ?int
     {
@@ -273,5 +390,201 @@ class Post
         return $this;
     }
 
+
+//    --------------------------------------
+
+    public function getStrikeDate(): ?\DateTimeInterface
+    {
+        return $this->strikeDate;
+    }
+
+    public function setStrikeDate(\DateTimeInterface $strikeDate): self
+    {
+        $this->strikeDate = $strikeDate;
+
+        return $this;
+    }
+
+
+    public function getStrikeAddress(): ?string
+    {
+        return $this->strikeAddress;
+    }
+
+    public function setStrikeAddress(?string $strikeAddress): self
+    {
+        $this->strikeAddress = $strikeAddress;
+
+        return $this;
+    }
+
+
+    public function getStrikeCity(): ?string
+    {
+        return $this->strikeCity;
+    }
+
+    public function setStrikeCity(?string $strikeCity): self
+    {
+        $this->strikeCity = $strikeCity;
+
+        return $this;
+    }
+
+
+    public function getStrikeZipcode(): ?int
+    {
+        return $this->strikeZipcode;
+    }
+
+    public function setStrikeZipcode(?int $strikeZipcode): self
+    {
+        $this->strikeZipcode = $strikeZipcode;
+
+        return $this;
+    }
+
+
+    public function getStrikeCountry(): ?string
+    {
+        return $this->strikeCountry;
+    }
+
+    public function setStrikeCountry(?string $strikeCountry): self
+    {
+        $this->strikeCountry = $strikeCountry;
+
+        return $this;
+    }
+
+
+    public function getBusinessLogo(): ?string
+    {
+        return $this->businessLogo;
+    }
+
+    public function setBusinessLogo(?string $businessLogo): self
+    {
+        $this->businessLogo = $businessLogo;
+
+        return $this;
+    }
+
+
+    public function getBusinessName(): ?string
+    {
+        return $this->businessName;
+    }
+
+    public function setBusinessName(?string $businessName): self
+    {
+        $this->businessName = $businessName;
+
+        return $this;
+    }
+
+
+    public function getBusinessBranch(): ?string
+    {
+        return $this->businessBranch;
+    }
+
+    public function setBusinessBranch(?string $businessBranch): self
+    {
+        $this->businessBranch = $businessBranch;
+
+        return $this;
+    }
+
+
+    public function getBusinessAddress(): ?string
+    {
+        return $this->businessAddress;
+    }
+
+    public function setBusinessAddress(?string $businessAddress): self
+    {
+        $this->businessAddress = $businessAddress;
+
+        return $this;
+    }
+
+
+    public function getBusinessCity(): ?string
+    {
+        return $this->businessCity;
+    }
+
+    public function setBusinessCity(?string $businessCity): self
+    {
+        $this->businessCity = $businessCity;
+
+        return $this;
+    }
+
+
+    public function getBusinessZipcode(): ?int
+    {
+        return $this->businessZipcode;
+    }
+
+    public function setBusinessZipcode(?int $businessZipcode): self
+    {
+        $this->businessZipcode = $businessZipcode;
+
+        return $this;
+    }
+
+
+    public function getBusinessCountry(): ?string
+    {
+        return $this->businessCountry;
+    }
+
+    public function setBusinessCountry(?string $businessCountry): self
+    {
+        $this->businessCountry = $businessCountry;
+
+        return $this;
+    }
+
+
+    public function getBusinessEmail(): ?string
+    {
+        return $this->businessEmail;
+    }
+
+    public function setBusinessEmail(?string $businessEmail): self
+    {
+        $this->businessEmail = $businessEmail;
+
+        return $this;
+    }
+
+
+    public function getBusinessWebpage(): ?string
+    {
+        return $this->businessWebpage;
+    }
+
+    public function setBusinessWebpage(?string $businessWebpage): self
+    {
+        $this->businessWebpage = $businessWebpage;
+
+        return $this;
+    }
+
+
+    public function getBusinessLocation(): ?string
+    {
+        return $this->businessLocation;
+    }
+
+    public function setBusinessLocation(?string $businessLocation): self
+    {
+        $this->businessLocation = $businessLocation;
+
+        return $this;
+    }
 
 }

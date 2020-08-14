@@ -23,16 +23,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SignaturesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Signatures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Stories.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatures/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,6 +154,8 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fzHW1R82e4Y75g52XAELaiF37f" />
@@ -163,7 +171,20 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/b2aacde4-d78a-4df3-8ec0-4fd7ad3c841c/console.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.console.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -174,8 +195,30 @@
       <option name="presentableId" value="Default" />
       <updated>1597214028505</updated>
       <workItem from="1597214029662" duration="35266000" />
-      <workItem from="1597303277345" duration="4350000" />
+      <workItem from="1597303277345" duration="35195000" />
     </task>
+    <task id="LOCAL-00001" summary="merge">
+      <created>1597315684701</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597315684701</updated>
+    </task>
+    <task id="LOCAL-00002" summary="merge">
+      <created>1597315760610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597315760610</updated>
+    </task>
+    <task id="LOCAL-00003" summary="merge">
+      <created>1597315780308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597315780308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +237,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="464" key="#Composer" timestamp="1597214043488">
@@ -213,33 +257,41 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597247358373" />
-    <state width="1293" height="232" key="GridCell.Tab.0.bottom" timestamp="1597307034639">
+    <state width="1293" height="232" key="GridCell.Tab.0.bottom" timestamp="1597324400920">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="232" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597307034639" />
-    <state width="1293" height="232" key="GridCell.Tab.0.center" timestamp="1597307034639">
+    <state width="1293" height="232" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597324400920" />
+    <state width="1293" height="232" key="GridCell.Tab.0.center" timestamp="1597324400920">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="232" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597307034639" />
-    <state width="1293" height="232" key="GridCell.Tab.0.left" timestamp="1597307034639">
+    <state width="1293" height="232" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597324400920" />
+    <state width="1293" height="232" key="GridCell.Tab.0.left" timestamp="1597324400920">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="232" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597307034639" />
-    <state width="1293" height="232" key="GridCell.Tab.0.right" timestamp="1597307034639">
+    <state width="1293" height="232" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597324400920" />
+    <state width="1293" height="232" key="GridCell.Tab.0.right" timestamp="1597324400920">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state width="1293" height="232" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597307034639" />
+    <state width="1293" height="232" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597324400920" />
     <state width="273" height="457" key="HiddenNamespacesPopup" timestamp="1597215490928">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state width="273" height="457" key="HiddenNamespacesPopup/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215490928" />
-    <state x="589" y="308" key="NewPhpClassDialog" timestamp="1597262678454">
+    <state x="589" y="308" key="NewPhpClassDialog" timestamp="1597336840152">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597262678454" />
+    <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597336840152" />
+    <state x="777" y="499" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597340362288">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="777" y="499" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597340362288" />
     <state x="667" y="318" width="585" height="534" key="find.popup" timestamp="1597262470973">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="667" y="318" width="585" height="534" key="find.popup/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597262470973" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1597323870729">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597323870729" />
   </component>
 </project>
