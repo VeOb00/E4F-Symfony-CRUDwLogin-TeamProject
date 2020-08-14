@@ -3,52 +3,55 @@
 {% block title %}Business index{% endblock %}
 
 {% block body %}
-    <h1>Business index</h1>
+    <div class="my-5">
+        <h3 class="display-4">Business Index</h3>
+        <h4 class="font-weight-light">Add, view and edit companies that are members and stand for sustainable
+            business.</h4>
+    </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Branch</th>
-                <th>StrNameNr</th>
-                <th>City</th>
-                <th>Zipcode</th>
-                <th>Country</th>
-                <th>E-Mail</th>
-                <th>Webpage</th>
-                <th>TelNr</th>
-                <th>Logo</th>
-                <th>Actions</th>
-            </tr>
+    <div class="row">
+        <a class="btn btn-outline-primary mx-3" href="{{ path('business_new') }}">Create new</a>
+        <a class="btn btn-outline-secondary mx-3" href="{{ path('admin') }}">Back to admin panel</a>
+    </div>
+    <br>
+    <table class="table table-striped table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th></th>
+            <th>Logo</th>
+            <th>Id</th>
+            <th>Name and Branch</th>
+            <th>Address</th>
+            <th>Webpage & e-mail</th>
+            <th>TelNr</th>
+        </tr>
         </thead>
         <tbody>
         {% for business in businesses %}
             <tr>
-                <td>{{ business.id }}</td>
-                <td>{{ business.name }}</td>
-                <td>{{ business.branch }}</td>
-                <td>{{ business.strNameNr }}</td>
-                <td>{{ business.city }}</td>
-                <td>{{ business.zipcode }}</td>
-                <td>{{ business.country }}</td>
-                <td>{{ business.eMail }}</td>
-                <td>{{ business.webpage }}</td>
+                <th scope="row">
+                    <a class="btn btn-outline-secondary btn-sm btn-block"
+                       href="{{ path('business_show', {'id': business.id}) }}">show</a>
+                    <a class="btn btn-outline-danger btn-sm btn-block"
+                       href="{{ path('business_edit', {'id': business.id}) }}">edit</a>
+                </th>
+                <td><img src="{{ business.logo }}" alt="none" class="" height="60" width="60"></td>
+                                <td>{{ business.id }}</td>
+                <td>{{ business.name }} <br> {{ business.branch }}</td>
+                <td>{{ business.strNameNr }} <br> {{ business.city }} <br> {{ business.zipcode }} <br>{{ business.country }}</td>
+                <td>{{ business.webpage }} <br> {{ business.eMail }}</td>
                 <td>{{ business.telNr }}</td>
-                <td>{{ business.logo }}</td>
-                <td>
-                    <a href="{{ path('business_show', {'id': business.id}) }}">show</a>
-                    <a href="{{ path('business_edit', {'id': business.id}) }}">edit</a>
-                </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="16">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('business_new') }}">Create new</a><br>
-    <a href="{{ path('admin') }}">Back to admin panel</a>
+    <div class="row">
+        <a class="btn btn-outline-primary mx-3" href="{{ path('business_new') }}">Create new</a>
+        <a class="btn btn-outline-secondary mx-3" href="{{ path('admin') }}">Back to admin panel</a>
+    </div>
 {% endblock %}

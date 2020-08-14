@@ -5,8 +5,10 @@ namespace App\Form;
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -49,11 +51,11 @@ class PostType extends AbstractType
                 ['help' => 'Fill out for strike information',
                     'required' => false,
                     'label' => 'City: '])
-            ->add('strikeZipcode', TextType::class,
+            ->add('strikeZipcode', IntegerType::class,
                 ['help' => 'Fill out for strike information',
                     'required' => false,
                     'label' => 'Zipcode: '])
-            ->add('strikeCountry', TextType::class,
+            ->add('strikeCountry', CountryType::class,
                 ['help' => 'Fill out for strike information',
                     'required' => false,
                     'label' => 'Country: '])
@@ -77,11 +79,11 @@ class PostType extends AbstractType
                 ['help' => 'Optional, fill out for success story business information',
                     'required' => false,
                     'label' => 'City/Place: '])
-            ->add('businessZipcode', TextType::class,
+            ->add('businessZipcode', IntegerType::class,
                 ['help' => 'Optional, fill out for success story business information',
                     'required' => false,
                     'label' => 'Zipcode: '])
-            ->add('businessCountry', TextType::class,
+            ->add('businessCountry', CountryType::class,
                 ['help' => 'Optional, fill out for success story business information',
                     'required' => false,
                     'label' => 'Country: '])

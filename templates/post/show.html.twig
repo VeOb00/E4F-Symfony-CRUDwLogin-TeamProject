@@ -2,69 +2,159 @@
 
 {% block title %}Post{% endblock %}
 
-{% block body %}
-    <h1>Post</h1>
 
-    <table class="table">
+{% block body %}
+    <div class="my-5">
+        <h3 class="display-4">{{ post.title }}</h3>
+        <h4 class="font-weight-light">{{ post.subtitle }}</h4>
+    </div>
+
+    <div class="row ml-1 my-3">
+        <div>
+            <a class="btn btn-outline-secondary" href="{{ path('post_index') }}">back to list</a>
+        </div>
+        <div>
+            <a class="btn btn-outline-primary mx-3" href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+        </div>
+        <div>
+            <form method="post" action="{{ path('post_delete', {'id': post.id}) }}"
+                  onsubmit="return confirm('Are you sure you want to delete this item?');">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ post.id) }}">
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-striped mt-3 table-hover">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>Subtitle</th>
-                <td>{{ post.subtitle }}</td>
-            </tr>
-            <tr>
-                <th>DatePublished</th>
-                <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>AuthorFn</th>
-                <td>{{ post.authorFn }}</td>
-            </tr>
-            <tr>
-                <th>AuthorLn</th>
-                <td>{{ post.authorLn }}</td>
-            </tr>
-            <tr>
-                <th>ImageMain</th>
-                <td>{{ post.imageMain }}</td>
-            </tr>
-            <tr>
-                <th>ImageMiddle</th>
-                <td>{{ post.imageMiddle }}</td>
-            </tr>
-            <tr>
-                <th>ImageBottom</th>
-                <td>{{ post.imageBottom }}</td>
-            </tr>
-            <tr>
-                <th>Excerpt</th>
-                <td>{{ post.excerpt }}</td>
-            </tr>
-            <tr>
-                <th>IntroText</th>
-                <td>{{ post.introText }}</td>
-            </tr>
-            <tr>
-                <th>MainText</th>
-                <td>{{ post.mainText }}</td>
-            </tr>
-            <tr>
-                <th>OutroText</th>
-                <td>{{ post.outroText }}</td>
-            </tr>
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">Basic Info</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Post Type</th>
+            <td>
+                <div class="badge badge-secondary">{{ post.postType }}</div>
+            </td>
+        </tr>
+        <tr>
+            <th>Post ID</th>
+            <td>{{ post.id }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Post Publishing Date</th>
+            <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Title</th>
+            <td>{{ post.title }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Subtitle</th>
+            <td>{{ post.subtitle }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Date Published</th>
+            <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Thumbnail/Main Image url and Preview:</th>
+            <td><img src="{{ post.imageMain }}" alt="none" class="" height="60"> <br>{{ post.imageMain }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Post Excerpt</th>
+            <td>{{ post.excerpt }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Author First and Last Name</th>
+            <td>{{ post.authorFn }} {{ post.authorLn }}</td>
+        </tr>
+
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">Post Building Blocks</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Intro Text</th>
+            <td>{{ post.introText }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Image url and Preview</th>
+            <td><img src="{{ post.imageMiddle }}" alt="none selected" class="" height="60"> <br>{{ post.imageMiddle }}
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Main Text</th>
+            <td>{{ post.mainText }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Image url and Preview</th>
+            <td><img src="{{ post.imageBottom }}" alt="none selected" class="" height="60"> <br>{{ post.imageBottom }}
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Outro Text</th>
+            <td>{{ post.outroText }}</td>
+        </tr>
+
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">"Strike Post" Building Blocks</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Strike Starting Date and Time</th>
+            <td>{{ post.strikeDate ? post.strikeDate|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Strike Address:</th>
+            <td>{{ post.strikeAddress }} <br> {{ post.strikeCity }}<br> {{ post.strikeZipcode }}
+                <br> {{ post.strikeCountry }}</td>
+        </tr>
+
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">"Success Story" Building Blocks:</th>
+            <td></td>
+        </tr>
+
+        <tbody>
+        <tr>
+            <th scope="row">Business Name</th>
+            <td>{{ post.businessName }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Business Branch</th>
+            <td>{{ post.businessBranch }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Business Logo url and Preview</th>
+            <td><img src="{{ post.imageMiddle }}" alt="none selected" class="" height="60"><br> {{ post.businessLogo }}
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Business Address</th>
+            <td>{{ post.businessAddress }} <br> {{ post.businessCity }} <br> {{ post.businessZipcode }}
+                <br> {{ post.businessCountry }}</td>
+        </tr>
+
         </tbody>
     </table>
-
-    <a href="{{ path('post_index') }}">back to list</a>
-
-    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
-
-    {{ include('post/_delete_form.html.twig') }}
+    <div class="row ml-1 my-3">
+        <div>
+            <a class="btn btn-outline-secondary" href="{{ path('post_index') }}">back to list</a>
+        </div>
+        <div>
+            <a class="btn btn-outline-primary mx-3" href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+        </div>
+        <div>
+            <form method="post" action="{{ path('post_delete', {'id': post.id}) }}"
+                  onsubmit="return confirm('Are you sure you want to delete this item?');">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ post.id) }}">
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

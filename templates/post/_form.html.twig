@@ -40,9 +40,11 @@
 </div>
 <br>
 <div class="form-row">
-    {{ form_label(form.excerpt) }}
-    {{ form_widget(form.excerpt) }}
-    {{ form_help(form.excerpt) }}
+    <div class="form-group col">
+        {{ form_label(form.excerpt) }}
+        {{ form_widget(form.excerpt) }}
+        {{ form_help(form.excerpt) }}
+    </div>
 </div>
 <br>
 <div class="form-row">

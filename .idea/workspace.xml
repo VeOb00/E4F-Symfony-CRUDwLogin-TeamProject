@@ -21,10 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_definition/T6_db_entrepreneurs.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/news.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/news.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BusinessType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BusinessType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +197,7 @@
       <updated>1597214028505</updated>
       <workItem from="1597214029662" duration="35266000" />
       <workItem from="1597303277345" duration="35757000" />
-      <workItem from="1597386634004" duration="12908000" />
+      <workItem from="1597386634004" duration="23888000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -243,10 +251,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="552" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215467026" />
-    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597262707453">
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597413985964">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597262707453" />
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597413985964" />
     <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1597247358373">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>

@@ -3,9 +3,23 @@
 {% block title %}New Business{% endblock %}
 
 {% block body %}
-    <h1>Create new Business</h1>
+    <div class="row">
+        <div class="form-group col-lg-8">
+            <div class="my-5">
+                <h3 class="display-4">Create new Member</h3>
+                <h4 class="font-weight-light">Add new member companies that stands for sustainable business.</h4>
+            </div>
 
-    {{ include('business/_form.html.twig') }}
+            {{ include('business/_form.html.twig') }}
+        </div>
+        <div class="col-lg-3 mt-5 mx-auto">
+            <a class="btn btn-outline-secondary btn-block btn-lg" href="{{ path('business_index') }}">back to list</a>
+        </div>
+    </div>
 
-    <a href="{{ path('business_index') }}">back to list</a>
+{#    <h1>Create new Business</h1>#}
+
+{#    {{ include('business/_form.html.twig') }}#}
+
+{#    <a href="{{ path('business_index') }}">back to list</a>#}
 {% endblock %}
