@@ -33,16 +33,26 @@ class PageController extends AbstractController
     }
 
     /**
-     * @Route("/news", name="news", methods={"GET"})
+     * @Route("/news", name="news", methods={"GET","POST"})
      */
     public function indexNews(): Response
     {
+//        $repository = $this->getDoctrine()->getRepository(Post::class);
+//        $posts = $repository->findBy(['post_type' => 'choices']);
+
+//        $posts = $postsRepository->findAllByType($type);
+//        $postNews = $postsRepository->findAllByType('news');
+//        $postStrike = $postsRepository->findAllByType('strike');
+
+
         $posts = $this->getDoctrine()
             ->getRepository(Post::class)
             ->findAll();
 
         return $this->render('pages/news.html.twig', [
             'posts' => $posts,
+//            'postNews' => $postNews,
+//            'postStrike' => $postStrike,
         ]);
     }
 
@@ -99,21 +109,15 @@ class PageController extends AbstractController
      */
     public function showSignatures(int $id, Cause $cause, Request $request, SignatoriesRepository $signatoriesRepository): Response
     {
-//        return $this->render('pages/singlepages/showsignatures.html.twig', [
-//            'cause' => $cause,
-//        ]);
         $signatories = $signatoriesRepository->findAllByCauseId($id);
         $signatory = new Signatory();
         $signatory->setFkCause($id);
-        /**todo
-         * pass value to form builder
-         */
+
         $form = $this->createForm(SignatoryType::class, $signatory);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-//            $entityManager->setCause($cause);
             $entityManager->persist($signatory);
             $entityManager->flush();
 
@@ -168,6 +172,7 @@ class PageController extends AbstractController
             'postTypes' => $postTypes
         ]);
     }
+
     /**
      * @Route("/posts/story/{id}", name="story_show", methods={"GET"})
      */

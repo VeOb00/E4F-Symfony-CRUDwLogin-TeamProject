@@ -12,9 +12,6 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
-<<<<<<< HEAD
-    Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
-=======
->>>>>>> bda66aa48ed6a60ce0b4da0bab710a686bad36fc
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
 ];
+
