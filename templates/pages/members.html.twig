@@ -1,63 +1,119 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Members{% endblock %}
+{% block title %}Members
+{% endblock %}
 
 {% block body %}
 
-    <br>
-    an overview list (possibly with a map / location) where you can find companies that are our members and stand for sustainable business.
-    <br>
+	<br>
+	{# an overview list (possibly with a map / location) where you can find companies that are our members and stand for sustainable business. #}
+	<br>
 
-    <h1>Business index</h1>
+	<h1 class="text-center">{{ 'our members'|upper }}</h1>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Branch</th>
-            <th>NrEmployees</th>
-            <th>StrNameNr</th>
-            <th>City</th>
-            <th>Zipcode</th>
-            <th>Country</th>
-            <th>EMail</th>
-            <th>Webpage</th>
-            <th>TelNr</th>
-            <th>Logo</th>
-            <th>Image</th>
-            <th>Description</th>
-            <th>Moto</th>
-            <th>actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for business in businesses %}
-            <tr>
-                <td>{{ business.id }}</td>
-                <td>{{ business.name }}</td>
-                <td>{{ business.branch }}</td>
-                <td>{{ business.nrEmployees }}</td>
-                <td>{{ business.strNameNr }}</td>
-                <td>{{ business.city }}</td>
-                <td>{{ business.zipcode }}</td>
-                <td>{{ business.country }}</td>
-                <td>{{ business.eMail }}</td>
-                <td>{{ business.webpage }}</td>
-                <td>{{ business.telNr }}</td>
-                <td>{{ business.logo }}</td>
-                <td>{{ business.image }}</td>
-                <td>{{ business.description }}</td>
-                <td>{{ business.moto }}</td>
-                <td>
-                    <a href="{{ path('members_show', {'id': business.id}) }}">show</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="16">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-{% endblock %}
+	{# <div class="container">
+			<div class="d-flex row justify-content-between flex-wrap">
+				{% for business in businesses %}
+					<div class="card mb-2" style="width: 18rem;">
+						<img src="{{ business.image }}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h4>{{ business.name }}</h4>
+							<p>{{ business.branch }}</p>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="card-link">more</a>
+							<a href="#" class="card-link">Another link</a>
+						</div>
+					</div>
+				{% endfor %} #}
+
+	<div class="container mt-4">
+		<div class="d-flex row justify-content-between flex-wrap">
+			{% for business in businesses %}
+				<div class="card mb-3" style="max-width: 150em;">
+					<div class="row no-gutters">
+						<div class="col-md-5">
+							<img src="{{ business.image }}" class="card-img img-fluid" alt="...">
+						</div>
+						<div class="col-md-7">
+							<div class="card-body">
+								<h5 class="card-title"> {{ business.name|upper }}</h5>
+								<p><small class="text-muted">branch: </small>{{ business.branch }}</p>
+								<p class="card-text">{{ business.description }}</p>
+
+								<p class="card-text">
+									<i class="fas fa-map-marker text-warning"></i>
+									<small class="text-muted">
+										{{ business.zipcode }}
+										{{ business.city }}
+										|
+										{{ business.strNameNr }}</small>
+								<br>
+									<i class="fas fa-phone-alt text-warning"></i>
+									<small class="text-muted">{{ business.telNr }}</small>
+								<br>
+								<a href="{{ path('members_show', {'id': business.id}) }}">
+									<i class="fas fa-angle-double-right text-secondary fa-2x"></i>
+								</a>
+
+								<a href="#" class="card-link ml-4"></a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+{# <table class="table">
+						        <thead>
+						        <tr>
+						            <th>Id</th>
+						            <th>Name</th>
+						            <th>Branch</th>
+						            <th>NrEmployees</th>
+						            <th>StrNameNr</th>
+						            <th>City</th>
+						            <th>Zipcode</th>
+						            <th>Country</th>
+						            <th>EMail</th>
+						            <th>Webpage</th>
+						            <th>TelNr</th>
+						            <th>Logo</th>
+						            <th>Image</th>
+						            <th>Description</th>
+						            <th>Moto</th>
+						            <th>actions</th>
+						        </tr>
+						        </thead>
+						        <tbody>
+						        {% for business in businesses %}
+						            <tr>
+						                <td>{{ business.id }}</td>
+						                <td>{{ business.name }}</td>
+						                <td>{{ business.branch }}</td>
+						                <td>{{ business.nrEmployees }}</td>
+						                <td>{{ business.strNameNr }}</td>
+						                <td>{{ business.city }}</td>
+						                <td>{{ business.zipcode }}</td>
+						                <td>{{ business.country }}</td>
+						                <td>{{ business.eMail }}</td>
+						                <td>{{ business.webpage }}</td>
+						                <td>{{ business.telNr }}</td>
+						                <td>{{ business.logo }}</td>
+						                <td>{{ business.image }}</td>
+						                <td>{{ business.description }}</td>
+						                <td>{{ business.moto }}</td>
+						                <td>
+						                    <a href="{{ path('members_show', {'id': business.id}) }}">show</a>
+						                </td>
+						            </tr>
+						        {% else %}
+						            <tr>
+						                <td colspan="16">no records found</td>
+						            </tr>
+						        {% endfor %}
+						        </tbody>
+						    </table> #}{% endblock %}

@@ -1,59 +1,70 @@
 {# {{ form_start(form) }} #}
-{#    {{ form_widget(form) }} #}
-{#    <button class="btn">{{ button_label|default('Save') }}</button> #}
+{# {{ form_widget(form) }} #}
+{# <button class="btn">{{ button_label|default('Save') }}</button> #}
 {# {{ form_end(form) }} #}
 
 {{ form_start(form) }}
 
+<div class="form-row border p-4 mb-5 bg-light">
+    <div class="form-group col">
+        {{ form_label(form.post_type) }}
+        {{ form_widget(form.post_type) }}
+        {{ form_help(form.post_type) }}
+    </div>
+    <div class="form-group col">
+        {{ form_label(form.datePublished) }}
+        {{ form_widget(form.datePublished) }}
+        {{ form_help(form.datePublished) }}
+    </div>
+</div>
 <div class="form-row">
     <div class="form-group col">
         {{ form_label(form.title) }}
         {{ form_widget(form.title) }}
         {{ form_help(form.title) }}
     </div>
-
-
+</div>
+<div class="form-row">
     <div class="form-group col">
         {{ form_label(form.subtitle) }}
         {{ form_widget(form.subtitle) }}
         {{ form_help(form.subtitle) }}
     </div>
-
-
-    <div class="form-group col">
-        {{ form_label(form.datePublished) }}
-        {{ form_widget(form.datePublished) }}
-        {{ form_help(form.datePublished) }}
-    </div>
-
 </div>
+<div class="form-row">
+    <div class="form-group col">
+        {{ form_label(form.imageMain) }}
+        {{ form_widget(form.imageMain) }}
+        {{ form_help(form.imageMain) }}
+    </div>
+</div>
+<br>
+<div class="form-row">
+    {{ form_label(form.excerpt) }}
+    {{ form_widget(form.excerpt) }}
+    {{ form_help(form.excerpt) }}
+</div>
+<br>
 <div class="form-row">
     <div class="form-group col">
         {{ form_label(form.authorFn) }}
         {{ form_widget(form.authorFn) }}
         {{ form_help(form.authorFn) }}
     </div>
-
-
     <div class="form-group col">
         {{ form_label(form.authorLn) }}
-            {{ form_widget(form.authorLn) }}
-            {{ form_help(form.authorLn) }}
-    </div>
-
-
-    <div class="form-group col">
-        {{ form_label(form.post_type) }}
-            {{ form_widget(form.post_type) }}
-            {{ form_help(form.post_type) }}
+        {{ form_widget(form.authorLn) }}
+        {{ form_help(form.authorLn) }}
     </div>
 </div>
-
-<div class="form-row">
+<br>
+<br>
+<label>Post Building Blocks: </label>
+<div class="form-group border p-4 mb-5 bg-light">
     <div class="form-group col">
-        {{ form_label(form.imageMain) }}
-        {{ form_widget(form.imageMain) }}
-        {{ form_help(form.imageMain) }}
+        {{ form_label(form.introText) }}
+        {{ form_widget(form.introText, {'attr': {'rows': '10'}}) }}
+        {{ form_help(form.introText) }}
     </div>
     <div class="form-group col">
         {{ form_label(form.imageMiddle) }}
@@ -61,35 +72,129 @@
         {{ form_help(form.imageMiddle) }}
     </div>
     <div class="form-group col">
+        {{ form_label(form.mainText) }}
+        {{ form_widget(form.mainText, {'attr': {'rows': '15'}}) }}
+        {{ form_help(form.mainText) }}
+    </div>
+    <div class="form-group col">
         {{ form_label(form.imageBottom) }}
         {{ form_widget(form.imageBottom) }}
         {{ form_help(form.imageBottom) }}
     </div>
+    <div class="form-group col">
+        {{ form_label(form.outroText) }}
+        {{ form_widget(form.outroText, {'attr': {'rows': '10'}}) }}
+        {{ form_help(form.outroText) }}
+    </div>
 </div>
 
-<div class="form-row">
-    {{ form_label(form.excerpt) }}
-    {{ form_widget(form.excerpt) }}
-    {{ form_help(form.excerpt) }}
+<label>"Strike Post" Building Block: </label><br>
+<div class="form-group border px-4 pt-4 pb-1 mb-5 bg-light">
+    <div class="form-row">
+        <div class="form-group col-lg-6">
+            {{ form_label(form.strikeDate) }}
+            {{ form_widget(form.strikeDate) }}
+            {{ form_help(form.strikeDate) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.strikeAddress) }}
+            {{ form_widget(form.strikeAddress) }}
+            {{ form_help(form.strikeAddress) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.strikeCity) }}
+            {{ form_widget(form.strikeCity) }}
+            {{ form_help(form.strikeCity) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.strikeZipcode) }}
+            {{ form_widget(form.strikeZipcode) }}
+            {{ form_help(form.strikeZipcode) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.strikeCountry) }}
+            {{ form_widget(form.strikeCountry) }}
+            {{ form_help(form.strikeCountry) }}
+        </div>
+    </div>
+    <small>Only fill out for post type <b>strike</b></small>
 </div>
-<div class="form-row">
-    {{ form_label(form.introText) }}
-    {{ form_widget(form.introText) }}
-    {{ form_help(form.introText) }}
-</div>
-<div class="form-row">
-    {{ form_label(form.mainText) }}
-    {{ form_widget(form.mainText) }}
-    {{ form_help(form.mainText) }}
-</div>
-<div class="form-row">
-    {{ form_label(form.outroText) }}
-    {{ form_widget(form.outroText) }}
-    {{ form_help(form.outroText) }}
+
+<label>"Success Story" Business Information: </label><br>
+<div class="form-group border px-4 pt-4 pb-1 mb-5 bg-light">
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessName) }}
+            {{ form_widget(form.businessName) }}
+            {{ form_help(form.businessName) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessBranch) }}
+            {{ form_widget(form.businessBranch) }}
+            {{ form_help(form.businessBranch) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.businessLogo) }}
+            {{ form_widget(form.businessLogo) }}
+            {{ form_help(form.businessLogo) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessAddress) }}
+            {{ form_widget(form.businessAddress) }}
+            {{ form_help(form.businessAddress) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessCity) }}
+            {{ form_widget(form.businessCity) }}
+            {{ form_help(form.businessCity) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.businessZipcode) }}
+            {{ form_widget(form.businessZipcode) }}
+            {{ form_help(form.businessZipcode) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.businessCountry) }}
+            {{ form_widget(form.businessCountry) }}
+            {{ form_help(form.businessCountry) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessEmail) }}
+            {{ form_widget(form.businessEmail) }}
+            {{ form_help(form.businessEmail) }}
+        </div>
+        <div class="form-group col">
+            {{ form_label(form.businessWebpage) }}
+            {{ form_widget(form.businessWebpage) }}
+            {{ form_help(form.businessWebpage) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.businessLocation) }}
+            {{ form_widget(form.businessLocation, {'attr': {'rows': '3'}}) }}
+            {{ form_help(form.businessLocation) }}
+        </div>
+    </div>
+    <small>Only fill out for post type <b>story</b></small>
 </div>
 
 
-<div><button class="btn btn-outline-primary btn-block btn-lg col-md-4 my-3 rounded-0">{{ button_label|default('Save') }}</button></div>
+<div>
+    <button class="btn btn-outline-primary btn-block btn-lg col-md-4 my-3">{{ button_label|default('Save') }}</button>
+</div>
 
 
 {{ form_end(form) }}

@@ -7,11 +7,9 @@ use App\Entity\Business;
 use App\Entity\Cause;
 use App\Entity\Post;
 use App\Entity\Signatory;
-use App\Entity\Signatures;
 use App\Form\SignatoryType;
-use App\Form\SignaturesType;
-use App\Repository\EventsRepository;
 use App\Repository\PostRepository;
+use App\Repository\SignatoriesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,16 +33,19 @@ class PageController extends AbstractController
     }
 
     /**
-     * @Route("/news", name="news", methods={"GET"})
+     * @Route("/news", name="news", methods={"GET","POST"})
      */
-    public function indexNews(): Response
+    public function indexNews(PostRepository $postsRepository): Response
     {
-        $posts = $this->getDoctrine()
-            ->getRepository(Post::class)
-            ->findAll();
+        $type = 'news';
+        $postNews = $postsRepository->findAllByType($type);
+        $type = 'strike';
+        $postStrike = $postsRepository->findAllByType($type);
+
 
         return $this->render('pages/news.html.twig', [
-            'posts' => $posts,
+            'postNews' => $postNews,
+            'postStrike' => $postStrike,
         ]);
     }
 
@@ -99,29 +100,21 @@ class PageController extends AbstractController
     /**
      * @Route("sign/{id}", name="sign_show", methods={"GET","POST"})
      */
-    public function showSignatures(Cause $cause, Request $request): Response
+    public function showSignatures(int $id, Cause $cause, Request $request, SignatoriesRepository $signatoriesRepository): Response
     {
-//        return $this->render('pages/singlepages/showsignatures.html.twig', [
-//            'cause' => $cause,
-//        ]);
-        $signatories = $this->getDoctrine()
-            ->getRepository(Signatory::class)
-            ->findAll();
+        $signatories = $signatoriesRepository->findAllByCauseId($id);
         $signatory = new Signatory();
-//        $cause = $this->getDoctrine()->getRepository(Cause::class)->find(id);
-        /**todo
-         * pass value to form builder
-         */
+        $signatory->setFkCause($id);
+
         $form = $this->createForm(SignatoryType::class, $signatory);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-//            $entityManager->setCause($cause);
             $entityManager->persist($signatory);
             $entityManager->flush();
 
-            return $this->redirectToRoute('sign_show');
+            return $this->redirectToRoute('sign');
         }
 
         return $this->render('pages/singlepages/showsignatures.html.twig', [
@@ -172,6 +165,7 @@ class PageController extends AbstractController
             'postTypes' => $postTypes
         ]);
     }
+
     /**
      * @Route("/posts/story/{id}", name="story_show", methods={"GET"})
      */
