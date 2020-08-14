@@ -35,24 +35,17 @@ class PageController extends AbstractController
     /**
      * @Route("/news", name="news", methods={"GET","POST"})
      */
-    public function indexNews(): Response
+    public function indexNews(PostRepository $postsRepository): Response
     {
-//        $repository = $this->getDoctrine()->getRepository(Post::class);
-//        $posts = $repository->findBy(['post_type' => 'choices']);
+        $type = 'news';
+        $postNews = $postsRepository->findAllByType($type);
+        $type = 'strike';
+        $postStrike = $postsRepository->findAllByType($type);
 
-//        $posts = $postsRepository->findAllByType($type);
-//        $postNews = $postsRepository->findAllByType('news');
-//        $postStrike = $postsRepository->findAllByType('strike');
-
-
-        $posts = $this->getDoctrine()
-            ->getRepository(Post::class)
-            ->findAll();
 
         return $this->render('pages/news.html.twig', [
-            'posts' => $posts,
-//            'postNews' => $postNews,
-//            'postStrike' => $postStrike,
+            'postNews' => $postNews,
+            'postStrike' => $postStrike,
         ]);
     }
 
