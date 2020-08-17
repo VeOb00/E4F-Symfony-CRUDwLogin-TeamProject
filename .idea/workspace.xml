@@ -20,26 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CauseType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CauseType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/business/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cause/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +164,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -216,7 +198,8 @@
       <workItem from="1597214029662" duration="35266000" />
       <workItem from="1597303277345" duration="35757000" />
       <workItem from="1597386634004" duration="24767000" />
-      <workItem from="1597648506789" duration="27823000" />
+      <workItem from="1597648506789" duration="28810000" />
+      <workItem from="1597682182453" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -250,7 +233,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -302,6 +312,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597336840152" />
+    <state x="461" y="230" key="SettingsEditor" timestamp="1597682311554">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="461" y="230" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597682311554" />
     <state x="777" y="499" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597340362288">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
