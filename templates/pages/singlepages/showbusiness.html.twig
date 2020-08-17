@@ -33,23 +33,21 @@
 							<br>
                             {% if business.telNr is not null %}
 							{{ business.telNr }}
-                            {% endif %}
 							<br>
-                            {% if business.webpage is defined %}
+                            {% endif %}
+                            {% if business.webpage is not null %}
 							<a href="https://{{ business.webpage }}">go to the website</a>
-                            {% endif %}
 							<br>
-                             {% if business.eMail is defined %}
+                            {% endif %}
+                            {% if business.eMail is not null %}
 							{{ business.eMail }}
                             {% endif %}
 						</p>
 						<hr>
 						<h5 class="card-title">facts:</h5>
 						<p class="card-text">
-                            {% if business.nrEmployee is defined %}
 							employees:
 							{{ business.nrEmployees }}
-                            {% endif %}
 							<br>
 							branch:
 							{{ business.branch }}
