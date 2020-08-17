@@ -1,21 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}Edit Business{% endblock %}
+{% block admintitle %}Edit Member{% endblock %}
+{% block adminsubtitle %}Edit {{ business.name }}, {{ business.branch }}{% endblock %}
 
-{% block body %}
+{% block admin %}
     <div class="row">
-        <div class="form-group col-lg-8">
-            <div class="my-5">
-                <h3 class="display-4">Create new Member</h3>
-                <h4 class="font-weight-light">Add new member companies that stands for sustainable business.</h4>
-            </div>
+        <div class="form-group col-lg-10">
             {{ include('business/_form.html.twig', {'button_label': 'Update'}) }}
-{#            {{ include('business/_form.html.twig') }}#}
+            {# {{ include('business/_form.html.twig') }} #}
         </div>
-        <div class="col-lg-3 mt-5 mx-auto">
+        <div class="col-lg-2 mx-auto">
             <a class="btn btn-outline-secondary btn-block" href="{{ path('business_index') }}">back to list</a>
             {{ include('business/_delete_form.html.twig') }}
         </div>
     </div>
-
 {% endblock %}

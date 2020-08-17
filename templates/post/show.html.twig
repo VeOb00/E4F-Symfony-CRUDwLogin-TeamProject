@@ -1,15 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}Post{% endblock %}
+{% block admintitle %}{{ post.title }}{% endblock %}
+{% block adminsubtitle %}{{ post.subtitle }}{% endblock %}
 
-
-{% block body %}
-    <div class="my-5">
-        <h3 class="display-4">{{ post.title }}</h3>
-        <h4 class="font-weight-light">{{ post.subtitle }}</h4>
-    </div>
-
-    <div class="row ml-1 my-3">
+{% block admin %}
+    <div class="row ml-1">
         <div>
             <a class="btn btn-outline-secondary" href="{{ path('post_index') }}">back to list</a>
         </div>

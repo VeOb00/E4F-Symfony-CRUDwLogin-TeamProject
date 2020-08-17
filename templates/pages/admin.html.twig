@@ -1,28 +1,55 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
+{% block title %}Admin panel{% endblock %}
+{% block admintitle %}Admin panel{% endblock %}
+{% block adminsubtitle %}Add, view and edit news articles, updates, strike information and company success stories.{% endblock %}
 
-{% block title %}Homepage{% endblock %}
-
-{% block body %}
-    <br>
-    hi from admin panel <br>
-
-    <div class="nav flex-column col-2">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('business_index') }}">Edit Members</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('post_index') }}">Edit Posts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('cause_index') }}">Edit Causes</a>
-            </li>
-
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Users Index? SuperAdmin only</a>
-            </li>
-        </ul>
+{% block admin %}
+    <div class="col-lg-8 mb-5">
+        <h4 class="mb-sm-3">Welcome to the admin page</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad at consectetur deleniti est expedita,
+            explicabo
+            in
+            ipsa labore nulla obcaecati omnis placeat quod repellat, repudiandae sequi veritatis! Harum, modi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias debitis delectus est, iste magnam,
+            molestias numquam, odio officia quos recusandae suscipit ullam? Amet impedit modi obcaecati quidem tempore
+            voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloremque enim, eos fugiat
+            itaque modi molestiae nesciunt numquam odio quae qui quis quod repellendus sint sunt temporibus ut vero
+            voluptatibus.</p>
     </div>
 
-{% endblock %}
+    <div class="row">
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title display-4">Posts</h5>
+                    <p class="card-text">Add, view and edit news articles, updates, strike information and company
+                        success stories.</p>
+                    <a href="{{ path('post_index') }}" class="btn btn-primary">Show &amp; Edit</a>
+                    <a href="{{ path('post_new') }}" class="btn btn-primary">Create</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title display-4">Members</h5>
+                    <p class="card-text">Add, view and edit companies that are members and stand for sustainable
+                        business.</p>
+                    <a href="{{ path('business_index') }}" class="btn btn-primary">Show &amp; Edit</a>
+                    <a href="{{ path('business_new') }}" class="btn btn-primary">Create</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title display-4">Causes</h5>
+                    <p class="card-text">Add, view and edit information about current causes.</p>
+                    <a href="{{ path('cause_index') }}" class="btn btn-primary">Show &amp; Edit</a>
+                    <a href="{{ path('cause_new') }}" class="btn btn-primary">Create</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock admin %}

@@ -20,8 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/T6_Entrepreneurs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CauseType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CauseType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/business/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/business/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cause/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cause/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +164,7 @@
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fzHW1R82e4Y75g52XAELaiF37f" />
@@ -161,8 +180,18 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\templates\pages" />
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -187,7 +216,7 @@
       <workItem from="1597214029662" duration="35266000" />
       <workItem from="1597303277345" duration="35757000" />
       <workItem from="1597386634004" duration="24767000" />
-      <workItem from="1597648506789" duration="438000" />
+      <workItem from="1597648506789" duration="27823000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
