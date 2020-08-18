@@ -32,19 +32,19 @@
 							{{ business.city }}
 							<br>
 							{{ business.strNameNr }}
-							<br>
+							<br> 
+                            {% if business.telNr is not empty %}
                             <i class="fas fa-phone-alt text-warning"></i> 
-                            {% if business.telNr is not null %}
 							{{ business.telNr }}
 							<br>
                             {% endif %}
-                            {% if business.webpage is not null %}
+                            {% if business.webpage is not empty %}
                             <i class="fas fa-globe-europe pr-1 text-warning"></i> 
-							<a href="https://{{ business.webpage }}">go to the website</a>
+							<a href="https://{{ business.webpage }}">company's website</a>
 							<br>
                             {% endif %}
                             <i class="fas fa-at text-warning"></i>
-                            {% if business.eMail is not null %}
+                            {% if business.eMail is not empty %}
 							{{ business.eMail }}
                             {% endif %}
 						</p>
