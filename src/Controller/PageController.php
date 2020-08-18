@@ -60,6 +60,16 @@ class PageController extends AbstractController
     }
 
     /**
+     * @Route("news/{id}", name="news_show", methods={"GET"})
+     */
+    public function showStrike(Post $post): Response
+    {
+        return $this->render('pages/singlepages/showsinglestrike.html.twig', [
+            'post' => $post,
+        ]);
+    }
+
+    /**
      * @Route("/members", name="members", methods={"GET"})
      */
     public function indexBusiness(): Response
