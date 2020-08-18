@@ -1,3 +1,16 @@
 p {
     font-family: unset;
 }
+
+footer {
+    margin-top: 5rem;
+}
+
+footer a {
+    color: darkgray !important;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(217,83,79) !important;
+}
