@@ -3,17 +3,23 @@
 {% block title %}News{% endblock %}
 
 {% block body %}
+<div class="container">
     <br>
-    hello from the newspage
+    <h1>Success Stories</h1>
     <br>
-    i will hold all the blogposts/ A news feed where we can put news, updates, current (strike) dates...
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     <br>
 
     <div class="row">
         {% for post in posts %}
-            <div class="col-md-6 col-lg-4 mb-5 ">
-                <img src="{{ post.imagemain }}" alt="">
+            <div class="card col-md-5 col-lg-5 mx-4 my-4">
+                <img class="" style="width: 100%;" src="{{ post.imagemain }}" alt="">
                 <h3>{{ post.title }}</h3>
+                <h5>{{ post.subtitle }}</h5>
+                <p>{{ post.excerpt }}</p>
                 <a href="/posts/story/{{ post.id }}"><small class="text-muted">More info</small></a>
             </div>
         {% else %}
@@ -22,5 +28,6 @@
             </div>
         {% endfor %}
     </div>
+</div>
 
 {% endblock %}

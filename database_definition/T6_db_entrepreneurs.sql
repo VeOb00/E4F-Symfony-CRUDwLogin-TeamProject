@@ -71,7 +71,7 @@ create table T6_Entrepreneurs.business
 # );
 
 
-CREATE TABLE ` T6_Entrepreneurs.user`
+CREATE TABLE  T6_Entrepreneurs.user
 (
     `id`       int(11)                                 NOT NULL AUTO_INCREMENT,
     `email`    varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,

@@ -4,48 +4,26 @@
 
 {% block body %}
     <br>
-    this page might hold a list of petitions available to sign?
+    <h1>Petitions</h1>
     <br>
 
-
-
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Subtitle</th>
-            <th>Excerpt</th>
-            <th>Image</th>
-            <th>Description</th>
-            <th>DateStart</th>
-            <th>DateEnd</th>
-            <th>actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for cause in causes %}
-            <tr>
-                <td>{{ cause.id }}</td>
-                <td>{{ cause.title }}</td>
-                <td>{{ cause.subtitle }}</td>
-                <td>{{ cause.excerpt }}</td>
-                <td>{{ cause.image }}</td>
-                <td>{{ cause.description }}</td>
-                <td>{{ cause.dateStart ? cause.dateStart|date('Y-m-d') : '' }}</td>
-                <td>{{ cause.dateEnd ? cause.dateEnd|date('Y-m-d') : '' }}</td>
-                <td>
+    <div class="row">
+    {% for cause in causes %}
+        <div class="container col-6 my-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cause.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ cause.subtitle }}</h6>
+                    <p class="card-text">{{ cause.excerpt }}</p>
                     <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
 
-
+    {% else %}
+    <tr>
+        <td colspan="9">no records found</td>
+    </tr>
+    {% endfor %}
 
 {% endblock %}
