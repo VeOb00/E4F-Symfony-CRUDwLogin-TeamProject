@@ -21,12 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/members.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/members.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +148,7 @@
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fzHW1R82e4Y75g52XAELaiF37f" />
@@ -166,8 +164,19 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\templates\pages" />
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CodeFactory\Project 2\Team6-Entrepreneur\T6-P8\T6_Entrepreneurs\public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -191,7 +200,10 @@
       <updated>1597214028505</updated>
       <workItem from="1597214029662" duration="35266000" />
       <workItem from="1597303277345" duration="35757000" />
-      <workItem from="1597386634004" duration="5402000" />
+      <workItem from="1597386634004" duration="24767000" />
+      <workItem from="1597648506789" duration="28810000" />
+      <workItem from="1597682182453" duration="1336000" />
+      <workItem from="1597736216938" duration="14413000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -214,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597315780308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="signatures crud in admin panel">
+      <created>1597754456329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597754456329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +244,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -234,7 +280,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="signatures crud in admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="signatures crud in admin panel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="464" key="#Composer" timestamp="1597214043488">
@@ -245,10 +292,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="552" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215467026" />
-    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597262707453">
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597744283396">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597262707453" />
+    <state x="690" y="340" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597744283396" />
     <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1597247358373">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
@@ -277,6 +324,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597336840152" />
+    <state x="461" y="230" key="SettingsEditor" timestamp="1597682311554">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="461" y="230" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597682311554" />
     <state x="777" y="499" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597340362288">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>

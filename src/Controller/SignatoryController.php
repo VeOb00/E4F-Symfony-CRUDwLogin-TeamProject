@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Cause;
 use App\Entity\Signatory;
 use App\Form\SignatoryType;
+use App\Repository\SignatoriesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,19 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class SignatoryController extends AbstractController
 {
+    /**
+     * @Route("/", name="cs_index", methods={"GET"})
+     */
+    public function indexSignature(): Response
+    {
+        $causes = $this->getDoctrine()
+            ->getRepository(Cause::class)
+            ->findAll();
+
+        return $this->render('signatory/cs-index.html.twig', [
+            'causes' => $causes,
+        ]);
+    }
     /**
      * @Route("/", name="signatory_index", methods={"GET"})
      */
@@ -59,14 +73,43 @@ class SignatoryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="signatory_show", methods={"GET"})
+     * @Route("/{id}", name="cs_show", methods={"GET","POST"})
      */
-    public function show(Signatory $signatory): Response
+    public function showSignatures(int $id, Cause $cause, Request $request, SignatoriesRepository $signatoriesRepository): Response
     {
-        return $this->render('signatory/show.html.twig', [
+        $signatories = $signatoriesRepository->findAllByCauseId($id);
+        $signatory = new Signatory();
+        $signatory->setFkCause($id);
+
+        $form = $this->createForm(SignatoryType::class, $signatory);
+        $form->handleRequest($request);
+
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $entityManager = $this->getDoctrine()->getManager();
+//            $entityManager->persist($signatory);
+//            $entityManager->flush();
+//
+//            return $this->redirectToRoute('sign');
+//        }
+
+        return $this->render('signatory/index.html.twig', [
+            'cause' => $cause,
             'signatory' => $signatory,
+            'form' => $form->createView(),
+            'signatories' => $signatories,
         ]);
+
     }
+
+//    /**
+//     * @Route("/{id}", name="signatory_show", methods={"GET"})
+//     */
+//    public function show(Signatory $signatory): Response
+//    {
+//        return $this->render('signatory/show.html.twig', [
+//            'signatory' => $signatory,
+//        ]);
+//    }
 
     /**
      * @Route("/{id}/edit", name="signatory_edit", methods={"GET","POST"})
@@ -99,6 +142,6 @@ class SignatoryController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('signatory_index');
+        return $this->redirectToRoute('cs_index');
     }
 }

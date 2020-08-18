@@ -1,0 +1,16 @@
+.hero {
+    /*background-image: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url("../img/bg.png");*/
+    background-image: linear-gradient(0deg, rgba(1,8,124,0.6), rgba(0, 0, 0, 0.0)), url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.nav-panel {
+    padding-top: 2rem;
+    margin-top: -2rem;
+}
+

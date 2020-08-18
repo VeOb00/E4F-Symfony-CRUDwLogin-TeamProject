@@ -1,9 +1,136 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}About Us{% endblock %}
+{% block title %}About Us
+{% endblock %}
 
 {% block body %}
-    <br>
-    the about us page, no DB, just html
-    <br>
+	<br>
+	<h1 class="text-center">{{ 'about us'|upper }}</h1>
+	<br>
+	<div class="container">
+		<div class="py-4 d-block" style="font-size: 1rem;">
+			<span class="text-danger" style="font-size: 1.5rem;"><em>Lorem ipsum dolor.</em>
+			</span>
+			sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
+			  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 												          
+			 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.												            													            
+		</div>
+
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters d-flex flex-wrap-reverse">
+				<div class="col-lg-8 pr-4">
+					<h5 class="card-title text-danger">who we are</h5>
+					<p class="card-text" style="font-size: 1rem;">
+						Lorem ipsum dolor sit amet, consetetur  sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut  labore et dolore magna aliquyam erat, sed diam voluptua. At 
+						       vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+							 eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.																										                            																												                           
+						<hr class="w-50">
+					</p>
+
+				</div>
+				<div class="col-lg-4 mb-4" style="font-size: 2.5rem;">
+					<p class="card-text">Lorem ipsum dolor sit amet,
+						<span class="text-danger">
+							<em>consetetur sadipscing elitr.</em>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters">
+				<div class="col-lg-6">
+					<img src="https://www.hbfuller.com/-/media/images/careers/teamwork-diverstiy-mission-and-culture.jpg" class="card-img vh-50" alt="...">
+				</div>
+				<div class="col-lg-6">
+					<div class="card-body pl-4">
+
+						<h5 class="card-title text-danger">Our mission</h5>
+						<p class="card-text" style="font-size: 1rem;">Lorem ipsum dolor sit amet, consetetur eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur 
+						sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters d-flex justify-content-between">
+				<div class="col-lg-6">
+					<div class="card-body">
+
+						<h5 class="card-title text-danger">our values</h5>
+						<p class="card-text" style="font-size: 1rem;"></p>
+						<p>
+							<i class="far fa-check-square text-danger fa-2x pr-2"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod</p>
+						<p>
+							<i class="far fa-check-square text-danger fa-2x pr-2"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod</p>
+						<p>
+							<i class="far fa-check-square text-danger fa-2x pr-2"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod</p>
+
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="card-body">
+
+						<h5 class="card-title">our targets</h5>
+						<p class="card-text" style="font-size: 1rem;"></p>
+						<p>
+							<i class="fas fa-leaf pr-1"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod
+						</p>
+						<p>
+							<i class="fas fa-exchange-alt pr-1"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod
+						</p>
+						<p>
+							<i class="fas fa-chart-pie pr-1"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod
+						</p>
+						<p>
+							<i class="fas fa-chart-bar pr-1"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod
+						</p>
+						<p>
+							<i class="fas fa-globe-europe pr-1"></i>
+							Lorem ipsum dolor sit amet, consetetur eirmod
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex flex-wrap justify-content-around">
+			<div class="rounded shadow m-1" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">sustainability</h5>
+					<h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-exchange-alt pr-1"></i></h6>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+			<div class="rounded shadow m-1" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">green economy</h5>
+					<h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-leaf pr-1 text-success"></i></h6>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+			<div class="rounded shadow m-1" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">regional economy</h5>
+					<h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-globe-europe pr-1 text-info"></i></h6>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Business;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -29,10 +30,9 @@ class BusinessType extends AbstractType
             ->add('telNr', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Contact Tel. Nr.:'])
             ->add('logo', UrlType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Company Logo url:'])
             ->add('image', UrlType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Teaser Image url:'])
-            ->add('description', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'About the company:'])
-            ->add('moto', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Motto:'])
-            ->add('gmaploc', TextType::class, ['help' => 'Optional, src link form google maps iframe', 'required' => false, 'label' => 'Location:'])
-        ;
+            ->add('description', TextareaType::class, ['help' => 'Optional', 'required' => false, 'label' => 'About the company:'])
+            ->add('moto', TextareaType::class, ['help' => 'Optional, max. 500 characters long.', 'required' => false, 'label' => 'Business Motto or Slogan:'])
+            ->add('gmaploc', TextType::class, ['help' => 'Optional, src link form google maps iframe', 'required' => false, 'label' => 'Location:']);
     }
 
     public function configureOptions(OptionsResolver $resolver)

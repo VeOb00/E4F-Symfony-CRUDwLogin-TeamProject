@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block title %}Admin panel{% endblock %}
+
+{% block body %}
+
+    <div class="row hero">
+        <div class="my-5">
+            <h3 class="display-4">{% block admintitle %}{% endblock %}</h3>
+            <h4 class="font-weight-light">{% block adminsubtitle %}{% endblock %}</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="flex-column col-sm-4 col-md-3 col-lg-2 bg-info navbar-dark nav-panel mb-3 mb-lg-0">
+            <div class="nav flex-column navbar-dark">
+                <ul class="navbar-nav mr-auto ml-3">
+                    <li class="navbar-nav nav-item text-light mb-1">
+                        <a class="nav-link" href="{{ path('admin') }}">Admin panel</a>
+                    </li>
+                    <li class="navbar-nav nav-item text-light mb-1"> Posts
+                        <ul class="navbar-nav ml-3">
+                            <li>
+                                <a class="nav-link" href="{{ path('post_index') }}">Show &amp; edit</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ path('post_new') }}">Create new</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item text-light mb-1"> Members
+                        <ul class="navbar-nav ml-3">
+                            <li>
+                                <a class="nav-link" href="{{ path('business_index') }}">Show &amp; edit</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ path('business_new') }}">Create new</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item text-light mb-1"> Causes
+                        <ul class="navbar-nav ml-3">
+                            <li>
+                                <a class="nav-link" href="{{ path('cause_index') }}">Show &amp; edit</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ path('cause_new') }}">Create new</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item text-light mb-1"> Signatures
+                        <ul class="navbar-nav ml-3">
+                            <li>
+                                <a class="nav-link" href="{{ path('cs_index') }}">Show &amp; edit</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-7 col-md-9 col-lg-10">
+            {% block admin %}
+            {% endblock admin %}
+        </div>
+
+    </div>
+
+
+{% endblock body %}

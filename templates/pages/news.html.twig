@@ -10,17 +10,38 @@
     <br>
 
     <div class="row">
-        {% for post in posts %}
-            <div class="col-md-6 col-lg-4 mb-5 ">
-                <img src="{{ post.imagemain }}" alt="">
-                <h3>{{ post.title }}</h3>
-                <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a>
-            </div>
-        {% else %}
-            <div>
-                <p>no records found</p>
-            </div>
-        {% endfor %}
+
+        <div class="col-lg-8">
+            <h3>Hello from news, updates</h3>
+            {% for post in postNews %}
+                <div class="col-md-6 col-lg-4 mb-5 ">
+                    <img src="{{ post.imagemain }}" alt="">
+                    <h3>{{ post.title }}</h3>
+                    <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a>
+                </div>
+            {% else %}
+                <div>
+                    <p>no records found</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-lg-3">
+            <h3>Hello from the strike dates</h3>
+            <hr>
+            {% for post in postStrike %}
+                <div class="">
+{#                    <img src="{{ post.imagemain }}" alt="">#}
+                    <h3>{{ post.title }}</h3>
+                    <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a>
+                </div>
+            {% else %}
+                <div>
+                    <p>no records found</p>
+                </div>
+            {% endfor %}
+        </div>
+
     </div>
 
 {% endblock %}

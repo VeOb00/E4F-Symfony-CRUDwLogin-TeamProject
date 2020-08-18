@@ -1,11 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}New Business{% endblock %}
+{% block admintitle %}Create new Member{% endblock %}
+{% block adminsubtitle %}Add new member companies that stands for sustainable business.{% endblock %}
 
-{% block body %}
-    <h1>Create new Business</h1>
+{% block admin %}
+    <div class="row">
+        <div class="form-group col-lg-8">
+            {{ include('business/_form.html.twig') }}
+        </div>
+        <div class="col-lg-3 mt-5 mx-auto">
+            <a class="btn btn-outline-secondary btn-block" href="{{ path('business_index') }}">back to list</a>
+        </div>
+    </div>
 
-    {{ include('business/_form.html.twig') }}
+    {# <h1>Create new Business</h1> #}
 
-    <a href="{{ path('business_index') }}">back to list</a>
+    {# {{ include('business/_form.html.twig') }} #}
+
+    {# <a href="{{ path('business_index') }}">back to list</a> #}
 {% endblock %}

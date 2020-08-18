@@ -1,82 +1,132 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}Business{% endblock %}
 
-{% block body %}
-    <h1>Business</h1>
+{% block admintitle %}{{ business.name }}{% endblock %}
+{% block adminsubtitle %}{{ business.branch }}{% endblock %}
 
-    <table class="table">
+
+{% block admin %}
+    <div class="row ml-1 my-3">
+        <div>
+            <a class="btn btn-outline-secondary" href="{{ path('business_index') }}">back to list</a>
+        </div>
+        <div>
+            <a class="btn btn-outline-primary mx-3" href="{{ path('business_edit', {'id': business.id}) }}">edit</a>
+        </div>
+        <div>
+            <form method="post" action="{{ path('business_delete', {'id': business.id}) }}"
+                  onsubmit="return confirm('Are you sure you want to delete this item?');">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ business.id) }}">
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+
+
+    <table class="table table-striped mt-3 table-hover">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ business.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ business.name }}</td>
-            </tr>
-            <tr>
-                <th>Branch</th>
-                <td>{{ business.branch }}</td>
-            </tr>
-            <tr>
-                <th>NrEmployees</th>
-                <td>{{ business.nrEmployees }}</td>
-            </tr>
-            <tr>
-                <th>StrNameNr</th>
-                <td>{{ business.strNameNr }}</td>
-            </tr>
-            <tr>
-                <th>City</th>
-                <td>{{ business.city }}</td>
-            </tr>
-            <tr>
-                <th>Zipcode</th>
-                <td>{{ business.zipcode }}</td>
-            </tr>
-            <tr>
-                <th>Country</th>
-                <td>{{ business.country }}</td>
-            </tr>
-            <tr>
-                <th>EMail</th>
-                <td>{{ business.eMail }}</td>
-            </tr>
-            <tr>
-                <th>Webpage</th>
-                <td>{{ business.webpage }}</td>
-            </tr>
-            <tr>
-                <th>TelNr</th>
-                <td>{{ business.telNr }}</td>
-            </tr>
-            <tr>
-                <th>Logo</th>
-                <td>{{ business.logo }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ business.image }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ business.description }}</td>
-            </tr>
-            <tr>
-                <th>Moto</th>
-                <td>{{ business.moto }}</td>
-            </tr>
-            <tr>
-                <th>gmap</th>
-                <td>{{ business.gmaploc }}</td>
-            </tr>
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">Basic Info</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ business.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ business.name }}</td>
+        </tr>
+        <tr>
+            <th>Branch</th>
+            <td>{{ business.branch }}</td>
+        </tr>
+        <tr>
+            <th>Number of Employees</th>
+            <td>{{ business.nrEmployees }}</td>
+        </tr>
+        <tr>
+            <th>Company Logo url</th>
+            <td><img src="{{ business.logo }}" alt="none" class="" height="60"> <br>{{ business.logo }}</td>
+        </tr>
+        <tr>
+            <th>Teaser Image and url</th>
+            <td><img src="{{ business.image }}" alt="none" class="" height="60"> <br>{{ business.image }}</td>
+        </tr>
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">Contact Info</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Street Name and Number</th>
+            <td>{{ business.strNameNr }}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ business.city }}</td>
+        </tr>
+        <tr>
+            <th>Zipcode</th>
+            <td>{{ business.zipcode }}</td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td>{{ business.country }}</td>
+        </tr>
+        <tr>
+            <th>Google Maps iframe url</th>
+            <td>{{ business.gmaploc }}</td>
+        </tr>
+        <tr>
+            <th>e-mail Address</th>
+            <td>{{ business.eMail }}</td>
+        </tr>
+        <tr>
+            <th>Website</th>
+            <td>{{ business.webpage }}</td>
+        </tr>
+        <tr>
+            <th>Contact Tel. Nr.</th>
+            <td>{{ business.telNr }}</td>
+        </tr>
+        <tr class="table-secondary">
+            <th class="h3 font-weight-light">Business description</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>About the company</th>
+            <td>{{ business.description }}</td>
+        </tr>
+        <tr>
+            <th>Business Motto or Slogan</th>
+            <td>{{ business.moto }}</td>
+        </tr>
+
         </tbody>
     </table>
 
-    <a href="{{ path('business_index') }}">back to list</a>
+    <div class="row ml-1 my-3">
+        <div>
+            <a class="btn btn-outline-secondary" href="{{ path('business_index') }}">back to list</a>
+        </div>
+        <div>
+            <a class="btn btn-outline-primary mx-3" href="{{ path('business_edit', {'id': business.id}) }}">edit</a>
+        </div>
+        <div>
+            <form method="post" action="{{ path('business_delete', {'id': business.id}) }}"
+                  onsubmit="return confirm('Are you sure you want to delete this item?');">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ business.id) }}">
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+    </div>
 
-    <a href="{{ path('business_edit', {'id': business.id}) }}">edit</a>
+    {# <a href="{{ path('business_index') }}">back to list</a> #}
 
-    {{ include('business/_delete_form.html.twig') }}
+    {# <a href="{{ path('business_edit', {'id': business.id}) }}">edit</a> #}
+
+    {# {{ include('business/_delete_form.html.twig') }} #}
 {% endblock %}

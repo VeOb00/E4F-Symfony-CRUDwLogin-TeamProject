@@ -1,15 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}Edit Post{% endblock %}
+{% block admintitle %}Edit post{% endblock %}
+{% block adminsubtitle %}Edit {{ post.title }}{% endblock %}
 
-{% block body %}
+{% block admin %}
     <div class="row">
-        <div class="form-group col-lg-8">
-            <h1>Edit Post</h1>
+        <div class="form-group col-lg-10">
+
             {{ include('post/_form.html.twig', {'button_label': 'Update'}) }}
         </div>
-        <div class="col-lg-3 mt-5 mx-auto">
-            <a class="btn btn-outline-secondary btn-block btn-lg" href="{{ path('post_index') }}">Back to List</a>
+        <div class="col-lg-2 mx-auto">
+            <a class="btn btn-outline-secondary btn-block" href="{{ path('post_index') }}">Back to List</a>
             {{ include('post/_delete_form.html.twig') }}
         </div>
     </div>

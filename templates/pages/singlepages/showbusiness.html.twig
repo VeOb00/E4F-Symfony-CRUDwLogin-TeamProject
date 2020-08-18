@@ -4,12 +4,12 @@
 {% endblock %}
 
 {% block body %}
-	
+
 
 	<div class="container">
-    <h1>{{ business.name }}</h1>
+		<h1>{{ business.name }}</h1>
 
-	{{ business.moto }}
+		{{ business.moto }}
 		<div class="row row-cols-1 row-cols-md-2 mt-4">
 			<div class="col mb-4">
 				<div class="card shadow">
@@ -20,110 +20,57 @@
 						</div>
 					</div>
 				</div>
-               </div> 
-				<div class="col mb-4">
-					<div class="card shadow">
-						<div class="card-body">
-							<h5 class="card-title">contact:</h5>
-							<p class="card-text">
-								{{ business.zipcode }}
-								{{ business.city }}
-								<br>
-								{{ business.strNameNr }}
-								<br>
-								{{ business.telNr }}
-								<br>
-								<a href="https://{{ business.webpage }}">website</a>
-								<br>
-								{{ business.eMail }}
-							</p>
-							<hr>
-							<h5 class="card-title">facts:</h5>
-							<p class="card-text">
-								employees:
-								{{ business.nrEmployees }}
-								<br>
-								branch:
-								{{ business.branch }}
-							</p>
-							<hr>
-							<h5 class="card-title">description:</h5>
-							<p class="card-text">{{ business.description }}</p>
-						</div>
+			</div>
+			<div class="col mb-4">
+				<div class="card shadow">
+					<div class="card-body">
+                    
+						<h5 class="card-title">contact:</h5>
+						<p class="card-text">
+                        <i class="fas fa-map-marker text-warning"></i> 
+							{{ business.zipcode }}
+							{{ business.city }}
+							<br>
+							{{ business.strNameNr }}
+							<br>
+                            <i class="fas fa-phone-alt text-warning"></i> 
+                            {% if business.telNr is not null %}
+							{{ business.telNr }}
+							<br>
+                            {% endif %}
+                            {% if business.webpage is not null %}
+                            <i class="fas fa-globe-europe pr-1 text-warning"></i> 
+							<a href="https://{{ business.webpage }}">go to the website</a>
+							<br>
+                            {% endif %}
+                            <i class="fas fa-at text-warning"></i>
+                            {% if business.eMail is not null %}
+							{{ business.eMail }}
+                            {% endif %}
+						</p>
+						<hr>
+						<h5 class="card-title">facts:</h5>
+						<p class="card-text">
+							employees:
+							{{ business.nrEmployees }}
+							<br>
+							branch:
+							{{ business.branch }}
+						</p>
+						<hr>
+						<h5 class="card-title">description:</h5>
+						<p class="card-text">{{ business.description }}</p>
+						<hr>
+						<p class="card-text d-flex justify-content-center">
+						<img class="w-25" src="{{ business.logo }}">
+						</p>
 					</div>
 				</div>
 			</div>
-            <button type="button" class="btn btn-secondary shadow">
+		</div>
+		<button type="button" class="btn btn-secondary shadow">
 			<a class="text-white" href="{{ path('members') }}">back to list</a>
 		</button>
-		</div>
+	</div>
 
-		{# <table class="table">
-			        <tbody>
-			        <tr>
-			            <th>Id</th>
-			            <td>{{ business.id }}</td>
-			        </tr>
-			        <tr>
-			            <th>Name</th>
-			            <td>{{ business.name }}</td>
-			        </tr>
-			        <tr>
-			            <th>Branch</th>
-			            <td>{{ business.branch }}</td>
-			        </tr>
-			        <tr>
-			            <th>NrEmployees</th>
-			            <td>{{ business.nrEmployees }}</td>
-			        </tr>
-			        <tr>
-			            <th>StrNameNr</th>
-			            <td>{{ business.strNameNr }}</td>
-			        </tr>
-			        <tr>
-			            <th>City</th>
-			            <td>{{ business.city }}</td>
-			        </tr>
-			        <tr>
-			            <th>Zipcode</th>
-			            <td>{{ business.zipcode }}</td>
-			        </tr>
-			        <tr>
-			            <th>Country</th>
-			            <td>{{ business.country }}</td>
-			        </tr>
-			        <tr>
-			            <th>EMail</th>
-			            <td>{{ business.eMail }}</td>
-			        </tr>
-			        <tr>
-			            <th>Webpage</th>
-			            <td>{{ business.webpage }}</td>
-			        </tr>
-			        <tr>
-			            <th>TelNr</th>
-			            <td>{{ business.telNr }}</td>
-			        </tr>
-			        <tr>
-			            <th>Logo</th>
-			            <td>{{ business.logo }}</td>
-			        </tr>
-			        <tr>
-			            <th>Image</th>
-			            <td>{{ business.image }}</td>
-			        </tr>
-			        <tr>
-			            <th>Description</th>
-			            <td>{{ business.description }}</td>
-			        </tr>
-			        <tr>
-			            <th>Moto</th>
-			            <td>{{ business.moto }}</td>
-			        </tr>
-			        </tbody>
-			    </table> #}
-
-		
-
-
-	{% endblock %}
+{% endblock %}

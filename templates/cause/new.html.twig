@@ -1,11 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}New Cause{% endblock %}
+{% block admintitle %}Create new Cause{% endblock %}
+{% block adminsubtitle %}Create a new cause to collect signatures for.{% endblock %}
 
-{% block body %}
-    <h1>Create new Cause</h1>
-
-    {{ include('cause/_form.html.twig') }}
-
-    <a href="{{ path('cause_index') }}">back to list</a>
+{% block admin %}
+    <div class="row">
+        <div class="form-group col-lg-10">
+            {{ include('cause/_form.html.twig') }}
+        </div>
+        <div class="col-lg-2 mx-auto">
+            <a class="btn btn-outline-secondary btn-block" href="{{ path('cause_index') }}">back to list</a>
+        </div>
+    </div>
 {% endblock %}

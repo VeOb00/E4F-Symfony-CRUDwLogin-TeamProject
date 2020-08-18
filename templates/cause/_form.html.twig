@@ -1,4 +1,63 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div class="form-group border px-4 pt-4 pb-1 mb-5 bg-light">
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.title) }}
+            {{ form_widget(form.title) }}
+            {{ form_help(form.title) }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            {{ form_label(form.subtitle) }}
+            {{ form_widget(form.subtitle) }}
+            {{ form_help(form.subtitle) }}
+        </div>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col">
+        {{ form_label(form.dateStart) }}
+        {{ form_widget(form.dateStart) }}
+        {{ form_help(form.dateStart) }}
+    </div>
+    <div class="form-group col">
+        {{ form_label(form.dateEnd) }}
+        {{ form_widget(form.dateEnd) }}
+        {{ form_help(form.dateEnd) }}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col">
+        {{ form_label(form.image) }}
+        {{ form_widget(form.image) }}
+        {{ form_help(form.image) }}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col">
+        {{ form_label(form.excerpt) }}
+        {{ form_widget(form.excerpt, {'attr': {'rows': '5'}}) }}
+        {{ form_help(form.excerpt) }}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description, {'attr': {'rows': '15'}}) }}
+        {{ form_help(form.description) }}
+    </div>
+</div>
+<button class="btn btn-outline-primary btn-block btn-lg col-md-4 my-3">{{ button_label|default('Save') }}</button>
+
+
 {{ form_end(form) }}
+
+
+
+
+
+{#    {{ form_start(form) }}#}
+{#    {{ form_widget(form) }}#}
+{#<button class="btn">{{ button_label|default('Save') }}</button>#}
+{#{{ form_end(form) }}#}

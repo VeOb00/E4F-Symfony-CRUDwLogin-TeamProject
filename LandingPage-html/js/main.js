@@ -1,9 +1,9 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
     
    "use strict"
     $('.slider').ripples({
-        dropRadius: 20,
-        perturbance: 0.01,
+        dropRadius: 10,
+        perturbance: 0.001,
     });
     
     $(".text").typed({
@@ -15,3 +15,6 @@ jQuery(document).ready(function() {
     
     
 });
+
+
+

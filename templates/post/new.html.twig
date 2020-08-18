@@ -1,16 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'pages/admin-temp.html.twig' %}
 
 {% block title %}New Post{% endblock %}
+{% block admintitle %}Create new post{% endblock %}
+{% block adminsubtitle %}Create a new news post, strike update or business success story by choosing the post type.{% endblock %}
 
-{% block body %}
+{% block admin %}
     <div class="row">
-        <div class="form-group col-lg-8">
-            <h1>Create new Post</h1>
-
+        <div class="form-group col-lg-10">
             {{ include('post/_form.html.twig') }}
         </div>
-        <div class="col-lg-3 mt-5 mx-auto">
-            <a class="btn btn-outline-secondary btn-block btn-lg" href="{{ path('post_index') }}">back to list</a>
+        <div class="col-lg-2 mx-auto">
+            <a class="btn btn-outline-secondary btn-block" href="{{ path('post_index') }}">back to list</a>
         </div>
     </div>
 {% endblock %}
