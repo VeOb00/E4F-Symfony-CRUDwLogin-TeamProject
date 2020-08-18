@@ -1,0 +1,37 @@
+{% extends 'pages/admin-temp.html.twig' %}
+
+{% block title %}Signatures{% endblock %}
+{% block admintitle %}Causes Index{% endblock %}
+{% block adminsubtitle %}View and edit (delete) signatures collected for causes.{% endblock %}
+
+{% block admin %}
+
+    <div class="row">
+        {% for cause in causes %}
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title display-4">{{ cause.title }}</h5>
+                        <p>Unique ID Nr.: <span class="h4">{{ cause.id }}</span></p>
+                        <p class="card-text"><small>{{ cause.excerpt }}</small></p>
+
+                        <p>{{ cause.dateStart ? cause.dateStart|date('Y-m-d') : '' }} -
+                            {% if cause.dateEnd is not null %}
+                                {{ cause.dateEnd ? cause.dateEnd|date('Y-m-d') : '' }}
+                            {% else %}
+                                open end date
+                            {% endif %}
+                        </p>
+                        <a href="{{ path('cs_show', {'id': cause.id}) }}" class="btn btn-primary">Show signatures</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
