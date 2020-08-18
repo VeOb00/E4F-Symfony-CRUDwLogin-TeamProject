@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SignatoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SignatoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SignatoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SignatoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatory/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatory/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatory/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signatory/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +200,7 @@
       <workItem from="1597386634004" duration="24767000" />
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
-      <workItem from="1597736216938" duration="11826000" />
+      <workItem from="1597736216938" duration="12627000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -230,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597315780308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="signatures crud in admin panel">
+      <created>1597754456329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597754456329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +277,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="signatures crud in admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="signatures crud in admin panel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="464" key="#Composer" timestamp="1597214043488">
