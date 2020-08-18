@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signatory/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/_form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +205,7 @@
       <workItem from="1597386634004" duration="24767000" />
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
-      <workItem from="1597736216938" duration="16878000" />
+      <workItem from="1597736216938" duration="20779000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
