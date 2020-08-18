@@ -24,21 +24,26 @@
 			<div class="col mb-4">
 				<div class="card shadow">
 					<div class="card-body">
+                    
 						<h5 class="card-title">contact:</h5>
 						<p class="card-text">
+                        <i class="fas fa-map-marker text-warning"></i> 
 							{{ business.zipcode }}
 							{{ business.city }}
 							<br>
 							{{ business.strNameNr }}
 							<br>
+                            <i class="fas fa-phone-alt text-warning"></i> 
                             {% if business.telNr is not null %}
 							{{ business.telNr }}
 							<br>
                             {% endif %}
                             {% if business.webpage is not null %}
+                            <i class="fas fa-globe-europe pr-1 text-warning"></i> 
 							<a href="https://{{ business.webpage }}">go to the website</a>
 							<br>
                             {% endif %}
+                            <i class="fas fa-at text-warning"></i>
                             {% if business.eMail is not null %}
 							{{ business.eMail }}
                             {% endif %}
