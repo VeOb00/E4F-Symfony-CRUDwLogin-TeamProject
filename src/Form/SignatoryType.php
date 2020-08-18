@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Signatory;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -27,7 +28,7 @@ class SignatoryType extends AbstractType
             ->add('address', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Address:'])
             ->add('zipcode', IntegerType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Zip-Code:'])
             ->add('city', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'City:'])
-            ->add('country', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Country:'])
+            ->add('country', CountryType::class, ['help' => 'Required', 'required' => true, 'label' => 'Country:'])
             ->add('fkCause', HiddenType::class)
         ;
     }
