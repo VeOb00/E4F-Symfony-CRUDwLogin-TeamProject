@@ -63,6 +63,16 @@
         </tbody>
     </table>
 
+    {% if post.postType() == 'strike' %}
+        <h1>only strike info</h1>
+        {{ post.strikeDate ? post.strikeDate|date('Y-m-d') : ''  }}
+        {{ post.strikeZipcode }}
+        {{ post.strikeCountry }}
+        {{ post.strikeCity }}
+        {{ post.strikeAddress }}
+    {% endif %}
+
+
     <a href="{{ path('news') }}">back to list</a>
 
 
