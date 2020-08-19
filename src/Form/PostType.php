@@ -30,7 +30,7 @@ class PostType extends AbstractType
             ->add('imageMiddle', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Image url:'])
             ->add('imageBottom', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Image url:'])
             ->add('excerpt', TextareaType::class, ['help' => 'Optional, max 500 characters, not visible in main article', 'required' => false, 'label' => 'Excerpt or Teaser Text:'])
-            ->add('introText', TextareaType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Intro Text:'])
+            ->add('introText', TextareaType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Intro Text:', 'trim'=>false])
             ->add('mainText', TextareaType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Main Text:'])
             ->add('outroText', TextareaType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Outro:'])
             ->add('post_type', ChoiceType::class,

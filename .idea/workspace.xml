@@ -20,23 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/baseempty.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/about.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baseempty.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseempty.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/members.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/members.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/news.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/news.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/signatures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/signatures.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showsignatures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showsignatures.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/story.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/story.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/tips.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/tips.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showsinglesuccessstory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showsinglesuccessstory.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signatory/cs-index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signatory/cs-index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +209,7 @@
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
       <workItem from="1597736216938" duration="24384000" />
-      <workItem from="1597821724073" duration="7082000" />
+      <workItem from="1597821724073" duration="16071000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
