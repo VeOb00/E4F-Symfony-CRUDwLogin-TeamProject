@@ -3,7 +3,7 @@
 {% block title %}Members
 {% endblock %}
 
-{% block pagetitle %}{{ business.name }}{% endblock %}
+{# {% block pagetitle %}{{ business.name }}{% endblock %} #}
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
@@ -71,9 +71,10 @@
 				</div>
 			</div>
 		</div>
-		<button type="button" class="btn btn-secondary shadow">
+		<button type="button" class="btn btn-info shadow">
 			<a class="text-white" href="{{ path('members') }}">back to list</a>
 		</button>
 	</div>
 
 {% endblock %}
+
