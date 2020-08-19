@@ -2,6 +2,21 @@ p {
     font-family: unset;
 }
 
+
+nav {
+    background-color: navy;
+}
+
+.hero {
+    background-image: linear-gradient(0deg, rgba(1,8,124,0.6), rgba(0, 0, 0, 0.0)), url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
 footer {
     margin-top: 5rem;
 }
