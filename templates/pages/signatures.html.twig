@@ -5,7 +5,6 @@
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
-<<<<<<< HEAD
     <div class="container">
     <br>
     <h1>Petitions</h1>
@@ -23,21 +22,6 @@
                         <p class="card-text">{{ cause.excerpt }}</p>
                         <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
                     </div>
-=======
-{#    <br>#}
-{#    <h1>Petitions</h1>#}
-{#    <br>#}
-
-    <div class="row">
-    {% for cause in causes %}
-        <div class="container col-6 my-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ cause.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ cause.subtitle }}</h6>
-                    <p class="card-text">{{ cause.excerpt }}</p>
-                    <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
->>>>>>> 849bcde63c45a7832afe189500df65652b51b1e0
                 </div>
             </div>
         
