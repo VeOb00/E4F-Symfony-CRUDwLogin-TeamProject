@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SignatoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SignatoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +201,7 @@
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
       <workItem from="1597736216938" duration="24384000" />
-      <workItem from="1597821724073" duration="22327000" />
+      <workItem from="1597821724073" duration="23758000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
