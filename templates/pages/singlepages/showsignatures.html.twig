@@ -6,46 +6,27 @@
 
 {% block body %}
     <br>
-    <h1>Cause show single page</h1>
-    <br>
-    <div class="row">
+    <div class="row ml-auto">
         <div class="col-8"> 
-            <table class="table">
-                <tbody>
-                <tr>
-                    <th>Id</th>
-                    <td>{{ cause.id }}</td>
-                </tr>
-                <tr>
-                    <th>Title</th>
-                    <td>{{ cause.title }}</td>
-                </tr>
-                <tr>
-                    <th>Subtitle</th>
-                    <td>{{ cause.subtitle }}</td>
-                </tr>
-                <tr>
-                    <th>Excerpt</th>
-                    <td>{{ cause.excerpt }}</td>
-                </tr>
-                <tr>
-                    <th>Image</th>
-                    <td>{{ cause.image }}</td>
-                </tr>
-                <tr>
-                    <th>Description</th>
-                    <td>{{ cause.description }}</td>
-                </tr>
-                <tr>
-                    <th>DateStart</th>
-                    <td>{{ cause.dateStart ? cause.dateStart|date('Y-m-d') : '' }}</td>
-                </tr>
-                <tr>
-                    <th>DateEnd</th>
-                    <td>{{ cause.dateEnd ? cause.dateEnd|date('Y-m-d') : '' }}</td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="card">
+        
+                <h1 class="card-title">{{ cause.title }}</h1>
+                <br>
+                <h3 class="card-subtitle">{{ cause.subtitle }}</h3>
+                <br>
+                <img style="width:25vw;" src="{{ cause.image }}">
+                <br>
+                <h5>About:</h5>
+                <p>{{ cause.description }}</p>
+                
+                <h5>Starting Date</h5>
+           
+                <p>{{ cause.dateStart ? cause.dateStart|date('Y-m-d') : '' }}</p>
+                
+                <h5>Ending Date</h5>
+                <p>{{ cause.dateEnd ? cause.dateEnd|date('Y-m-d') : '' }}</p>
+            </div>
+                
             <div>
                 <h3>Signatures collected</h3>
                 <table class="table">

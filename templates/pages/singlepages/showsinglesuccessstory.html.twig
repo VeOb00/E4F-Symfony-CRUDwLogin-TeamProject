@@ -1,12 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Post{% endblock %}
+{% block pagetitle %}Success Story{% endblock %}
+{% block pagesubtitle %}{{ post.businessname }}{% endblock %}
 
 {% block body %}
-    <br>
-    <h1>Success Story Single Page layout</h1>
-    <br>
-    <br>
         <div class="bg-light m-0 mb-4">
             <div class="container">
                 <div class="row">
@@ -39,17 +37,30 @@
         <br>
 
         <div class="row">
-
+            {% if post.imageMiddle is empty %}
+            <div class="col">
+                <p>{{ post.mainText }}</p>
+            </div>
+            
+            {% else %}
             <div class="col">
                 <p>{{ post.mainText }}</p>
             </div>
             <div class="col">
                 <img class="" style="width: 40vw;" src="{{ post.imageMiddle }}" alt="">
             </div>
+            {% endif %}
         </div>
+
         <br>
         <br>
+
         <div class="row">
+        {% if post.imageBottom is empty %}
+            <div class="col">
+                <p>{{ post.mainText }}</p>
+            </div>
+        {% else %}
             <div class="col">
                 <img class="" style="width: 40vw;" src="{{ post.imageBottom }}" alt="">
             </div>
@@ -58,6 +69,7 @@
                 <p>{{ post.outroText }}</p>
             </div>
         </div>
+        {% endif %}
     </div>
     <a href="/posts/story">back to list</a>
 

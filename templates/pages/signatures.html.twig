@@ -5,27 +5,34 @@
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
-{#    <br>#}
-{#    <h1>Petitions</h1>#}
-{#    <br>#}
-
-    <div class="row">
-    {% for cause in causes %}
-        <div class="container col-6 my-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ cause.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ cause.subtitle }}</h6>
-                    <p class="card-text">{{ cause.excerpt }}</p>
-                    <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
+    <div class="container">
+    <br>
+    <h1>Petitions</h1>
+    <br>
+    
+        <div class="row">
+        {% for cause in causes %}
+        
+            <div class="col-6 my-2">
+                <div class="card">
+                <img class="card-img-top" src="{{ cause.image }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cause.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ cause.subtitle }}</h6>
+                        <p class="card-text">{{ cause.excerpt }}</p>
+                        <a href="{{ path('sign_show', {'id': cause.id}) }}">show and sign</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        
+        
 
-    {% else %}
-    <tr>
-        <td colspan="9">no records found</td>
-    </tr>
-    {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="9">no records found</td>
+        </tr>
+        {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}

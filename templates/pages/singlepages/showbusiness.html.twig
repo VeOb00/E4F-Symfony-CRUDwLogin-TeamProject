@@ -3,7 +3,7 @@
 {% block title %}Members
 {% endblock %}
 
-{% block pagetitle %}{{ business.name }}{% endblock %}
+{# {% block pagetitle %}{{ business.name }}{% endblock %} #}
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
@@ -43,7 +43,7 @@
                             {% endif %}
                             {% if business.webpage is not empty %}
                             <i class="fas fa-globe-europe pr-1 text-warning"></i> 
-							<a href="https://{{ business.webpage }}">company's website</a>
+							<a href="{{ business.webpage }}">company's website</a>
 							<br>
                             {% endif %}
                             <i class="fas fa-at text-warning"></i>
@@ -71,9 +71,10 @@
 				</div>
 			</div>
 		</div>
-		<button type="button" class="btn btn-secondary shadow">
+		<button type="button" class="btn btn-info shadow">
 			<a class="text-white" href="{{ path('members') }}">back to list</a>
 		</button>
 	</div>
 
 {% endblock %}
+

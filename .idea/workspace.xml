@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/baseempty.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/admin-temp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/members.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/members.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/news.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/news.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/signatures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/signatures.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showbusiness.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showpost.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/singlepages/showsignatures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/singlepages/showsignatures.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/story.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/story.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/tips.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/tips.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +201,7 @@
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
       <workItem from="1597736216938" duration="24384000" />
-      <workItem from="1597821724073" duration="7082000" />
+      <workItem from="1597821724073" duration="23758000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -334,10 +318,14 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state width="273" height="457" key="HiddenNamespacesPopup/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597215490928" />
-    <state x="598" y="346" key="MultipleFileMergeDialog" timestamp="1597763703426">
+    <state x="184" y="99" key="MergeDialog" timestamp="1597844316402">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state x="598" y="346" key="MultipleFileMergeDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597763703426" />
+    <state x="184" y="99" key="MergeDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597844316402" />
+    <state x="598" y="346" key="MultipleFileMergeDialog" timestamp="1597844316409">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="598" y="346" key="MultipleFileMergeDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597844316409" />
     <state x="589" y="308" key="NewPhpClassDialog" timestamp="1597336840152">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>

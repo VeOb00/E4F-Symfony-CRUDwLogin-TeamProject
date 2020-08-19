@@ -1,81 +1,83 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Post{% endblock %}
-{% block pagetitle %}{{ post.title }}{% endblock %}
+{% block title %}Post
+{% endblock %}
+{# {% block pagetitle %}{{ post.title }}{% endblock %} #}
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
-
-    <h1>Post/news Single Page layout</h1>
-
-    <table class="table">
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ post.id }}</td>
-        </tr>
-        <tr>
-            <th>Title</th>
-            <td>{{ post.title }}</td>
-        </tr>
-        <tr>
-            <th>Subtitle</th>
-            <td>{{ post.subtitle }}</td>
-        </tr>
-        <tr>
-            <th>DatePublished</th>
-            <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
-        </tr>
-        <tr>
-            <th>AuthorFn</th>
-            <td>{{ post.authorFn }}</td>
-        </tr>
-        <tr>
-            <th>AuthorLn</th>
-            <td>{{ post.authorLn }}</td>
-        </tr>
-        <tr>
-            <th>ImageMain</th>
-            <td>{{ post.imageMain }}</td>
-        </tr>
-        <tr>
-            <th>ImageMiddle</th>
-            <td>{{ post.imageMiddle }}</td>
-        </tr>
-        <tr>
-            <th>ImageBottom</th>
-            <td>{{ post.imageBottom }}</td>
-        </tr>
-        <tr>
-            <th>Excerpt</th>
-            <td>{{ post.excerpt }}</td>
-        </tr>
-        <tr>
-            <th>IntroText</th>
-            <td>{{ post.introText }}</td>
-        </tr>
-        <tr>
-            <th>MainText</th>
-            <td>{{ post.mainText }}</td>
-        </tr>
-        <tr>
-            <th>OutroText</th>
-            <td>{{ post.outroText }}</td>
-        </tr>
-        </tbody>
-    </table>
-
-    {% if post.postType() == 'strike' %}
-        <h1>only strike info</h1>
-        {{ post.strikeDate ? post.strikeDate|date('Y-m-d') : ''  }}
-        {{ post.strikeZipcode }}
-        {{ post.strikeCountry }}
-        {{ post.strikeCity }}
-        {{ post.strikeAddress }}
-    {% endif %}
+	<div class="container">
+		<h1 class="mt-4">{{ post.title }}</h1>
+		<h4 class="mt-2 text-secondary">{{ post.subtitle }}</h4>
+		<small class="text-muted mb-2">recorded by/on:
+			{% if post.authorLn is not empty %}
+				{{ post.authorLn }}
+				|
+			{% endif %}
+			{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</small>
 
 
-    <a href="{{ path('news') }}">back to list</a>
+		{% if post.postType() == 'strike' %}
+
+			<div class="w-75 py-4">
+				<div class="row no-gutters d-flex flex-wrap-reverse">
+					<div class="col-lg-5 pr-4">
+						<div class="card-text">
+							<div class="mt-3">
+								<i class="fas fa-calendar-day text-secondary mr-2"></i>
+								{{ post.strikeDate ? post.strikeDate|date('Y-m-d') : ''  }}</div>
+							<div class="mb-1">
+								<i class="fas fa-map-marker text-secondary mr-2"></i>
+								{{ post.strikeAddress }}
+								|{{ post.strikeZipcode }}
+								{{ post.strikeCity }}
+								{{ post.strikeCountry }}</div>
+
+						</div>
+					</div>
+					<div class="col-lg-7 mb-1 text-danger" style="font-size: 2.5rem;">
+						{# <strong>save the date!</strong> #}
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		
+		<div class="d-flex justify-content-end mb-2">
+			<i class="fab fa-facebook-square text-info mr-1 fa-2x" title="share on facebook"></i>
+			<i class="fab fa-twitter-square text-info  mr-1 fa-2x" title="share on twitter"></i>
+			<i class="fab fa-linkedin text-info  mr-1 fa-2x" title="share on linkedIn"></i>
+			<i class="fas fa-share-square text-info  mr-1 fa-2x" title="share"></i>
+		</div>
+		<div class="card">
+			<img src="{{ post.imageMain }}" class="card-img-top" alt="image">
+		</div>
+
+		<div class="my-3 w-100">
+			{{ post.introText }}
+		</div>
+		{% if post.imageMiddle is not empty %}
+			<div class="card">
+				<img src="{{ post.imageMiddle }}" class="card-img-top" alt="image">
+			</div>
+		{% endif %}
+		<div class="my-3 w-100">
+			{{ post.mainText }}
+		</div>
+		{% if post.imageMiddle is not empty %}
+			<div class="card">
+				<img src="{{ post.imageBottom }}" class="card-img-top" alt="image">
+			</div>
+		{% endif %}
+		<div class="my-3 w-100">
+			{{ post.outroText }}
+		</div>
 
 
+		<button type="button" class="btn btn-info shadow">
+			<a class="text-white" href="{{ path('news') }}">back</a>
+		</button>
+
+	</div>
 {% endblock %}
+
+
