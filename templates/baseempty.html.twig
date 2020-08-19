@@ -12,19 +12,12 @@
                 integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
                 crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css">
-        {# <link rel="stylesheet" href="{{ asset('/assets/css/admin.css') }}"> #}
-        <link rel="stylesheet" href="{{ asset('/assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/css/admin.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     {% endblock %}
 </head>
 <body>
 {{ include('components/_navbar.html.twig') }}
-
-<div class="row hero">
-    <div class="my-5 text-center mx-auto">
-        <h3 class="display-4 text-uppercase">{% block pagetitle %}{% endblock %}</h3>
-        <h4 class="font-weight-light">{% block pagesubtitle %}{% endblock %}</h4>
-    </div>
-</div>
 
 <div class="container-fluid">
     {% block body %}{% endblock %}
