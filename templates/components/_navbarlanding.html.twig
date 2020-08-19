@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="" alt="">
+            <a href="" class="navbar-brand" style="color:white; margin-left: -300px;">Entrepeneurs 4 Future</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navi" >
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="{{path('news')}}">News</a></li>
+                <li><a href="/posts/story">Success Story</a></li>
+                <li><a href="{{path('members')}}">Members</a></li>
+                <li><a href="{{path('sign')}}">Sign</a></li>
+                <li><a href="{{path('tips')}}">Tips</a></li>
+                <li><a href="{{path('about')}}">About us</a></li>
+                
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('admin') }}">Admin Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_login') }}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
