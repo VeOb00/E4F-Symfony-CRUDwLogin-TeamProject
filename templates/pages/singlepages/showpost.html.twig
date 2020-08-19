@@ -1,81 +1,81 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Post{% endblock %}
-{% block pagetitle %}{{ post.title }}{% endblock %}
+{# {% block pagetitle %}{{ post.title }}{% endblock %} #}
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
+	<div class="container">
+		<h1 class="mt-4">{{ post.title }}</h1>
+        <h4 class="mt-2 text-secondary">{{ post.subtitle }}</h4>
+		<small class="text-muted mb-2">{{ post.authorFn }}
+			{{ post.authorLn }}
+			|
+			{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</small>
+		<div class="card">
+			<img src="{{ post.imageMain }}" class="card-img-top" alt="image">
+		</div>
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters d-flex">
+				<div class="col-lg-8 pr-4">
+					<h5 class="card-title text-info"></h5>
+					<div class="card-text" style="font-size:">{{ post.introText }}</div>
+				</div>
+				<div class="col-lg-4 mb-4" style="font-size: 2rem;">
+					<div class="card-text">Lorem ipsum dolor
+						<span class="text-info">
+							<em>consetetur sadipscing elitr.</em>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <h1>Post/news Single Page layout</h1>
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters">
+				<div class="col-lg-3">
+					<img src="{{ post.imageMiddle }}" class="card-img vh-50" alt="...">
+				</div>
+				<div class="col-lg-9">
+					<div class="card-body pl-4">
+						<div class="card-text">
+						 {{ post.mainText }}	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-100 py-4 text-center">	
+              <i class="fas fa-quote-left text-info"></i> <span style="font-size: 2.4rem;">Lorem ipsum dolor onsetetur sadipscing elitr. </span><i class="fas fa-quote-right text-info"></i>	
+		</div>
+		<div class="mb-3 w-100 py-4" style="max-width:;">
+			<div class="row no-gutters">
+				<div class="col-lg-9">
+					<div class="card-body pl-4">
+						<div class="card-text">
+							{{ post.outroText }}
+						</div>
+					</div>
+				</div>            
+				<div class="col-lg-3">
+					<img src="{{ post.imageBottom }}" class="card-img vh-50" alt="...">
+				</div>
+			</div>
+		</div>
 
-    <table class="table">
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ post.id }}</td>
-        </tr>
-        <tr>
-            <th>Title</th>
-            <td>{{ post.title }}</td>
-        </tr>
-        <tr>
-            <th>Subtitle</th>
-            <td>{{ post.subtitle }}</td>
-        </tr>
-        <tr>
-            <th>DatePublished</th>
-            <td>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</td>
-        </tr>
-        <tr>
-            <th>AuthorFn</th>
-            <td>{{ post.authorFn }}</td>
-        </tr>
-        <tr>
-            <th>AuthorLn</th>
-            <td>{{ post.authorLn }}</td>
-        </tr>
-        <tr>
-            <th>ImageMain</th>
-            <td>{{ post.imageMain }}</td>
-        </tr>
-        <tr>
-            <th>ImageMiddle</th>
-            <td>{{ post.imageMiddle }}</td>
-        </tr>
-        <tr>
-            <th>ImageBottom</th>
-            <td>{{ post.imageBottom }}</td>
-        </tr>
-        <tr>
-            <th>Excerpt</th>
-            <td>{{ post.excerpt }}</td>
-        </tr>
-        <tr>
-            <th>IntroText</th>
-            <td>{{ post.introText }}</td>
-        </tr>
-        <tr>
-            <th>MainText</th>
-            <td>{{ post.mainText }}</td>
-        </tr>
-        <tr>
-            <th>OutroText</th>
-            <td>{{ post.outroText }}</td>
-        </tr>
-        </tbody>
-    </table>
+		{% if post.postType() == 'strike' %}
+			<h1>only strike info</h1>
+			{{ post.strikeDate ? post.strikeDate|date('Y-m-d') : ''  }}
+			{{ post.strikeZipcode }}
+			{{ post.strikeCountry }}
+			{{ post.strikeCity }}
+			{{ post.strikeAddress }}
+		{% endif %}
 
-    {% if post.postType() == 'strike' %}
-        <h1>only strike info</h1>
-        {{ post.strikeDate ? post.strikeDate|date('Y-m-d') : ''  }}
-        {{ post.strikeZipcode }}
-        {{ post.strikeCountry }}
-        {{ post.strikeCity }}
-        {{ post.strikeAddress }}
-    {% endif %}
-
-
-    <a href="{{ path('news') }}">back to list</a>
-
-
+		<button type="button" class="btn btn-info shadow">
+			<a class="text-white" href="{{ path('news') }}">back to news</a>
+		</button>
+		
+	</div>
 {% endblock %}
+
