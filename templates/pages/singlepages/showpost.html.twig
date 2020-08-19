@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Post{% endblock %}
-{% block pagetitle %}{{ post.title }}{% endblock %}
+{# {% block pagetitle %}{{ post.title }}{% endblock %} #}
 {% block pagesubtitle %}{% endblock %}
 
 {% block body %}
 	<div class="container">
 		<h1 class="mt-4">{{ post.title }}</h1>
+        <h4 class="mt-2 text-secondary">{{ post.subtitle }}</h4>
 		<small class="text-muted mb-2">{{ post.authorFn }}
 			{{ post.authorLn }}
 			|
