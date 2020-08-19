@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Signatory;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -18,7 +19,7 @@ class SignatoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('documentType', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Passport, ID or Drivers Licence:'])
+            ->add('documentType', ChoiceType::class, ['help' => 'Required', 'required' => true, 'label' => 'Passport, ID or Drivers Licence:', 'choices'=>['passport'=>'passport', 'photo ID card'=>'photo ID card']])
             ->add('number', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'Identification number:'])
             ->add('fName', TextType::class, ['help' => 'Required', 'required' => true, 'label' => 'First Name:'])
             ->add('lName', TextType::class, ['help' => 'Optional', 'required' => false, 'label' => 'Last Name:'])
