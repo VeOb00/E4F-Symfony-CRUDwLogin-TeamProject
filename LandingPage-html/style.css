@@ -7,6 +7,11 @@ body {
     font-size: 20px;
 }
 
+.navbar-brand{
+    font-size: 1.5em;
+    color: white;
+}
+
 .navbar{
     padding: 22px 6px;
     border-bottom: none !important;
@@ -14,15 +19,15 @@ body {
 }
 
 .navbar-inverse{
-    background-color: black !important;
+    background-color: #4682B4!important;
 }
 
 .navbar ul li a{
     color: white !important;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 16px;
     transition: all 0.5s ease-in;
 }
 
@@ -50,7 +55,7 @@ body {
 
 .slider{
     width: 100%;
-    height: 700px;
+    height: 830px;
     background-image: url(img/FridaysForFuture.jpg);
     background-size: cover;
     background-position: center;
@@ -59,8 +64,8 @@ body {
 
 .slider-overlay{
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65);
+    height: 109%;
+    background: rgba(0,0,0,0.45);
     position: relative;
 }
 
@@ -69,7 +74,6 @@ body {
     top:65%;
     width: 100%;
 }
-
 
 .icons .fa{
     font-size: 35px;
@@ -146,6 +150,14 @@ body {
 }
 
 /*-----ripple ende-----*/
+
+
+
+
+
+
+
+
 
 .service-area{
     margin-top: 30px;
@@ -243,6 +255,7 @@ body {
     display: block;
     position: relative;
     background-color: #ffffff;
+    margin-left: -15%;
 }
 
 .post-media img,
@@ -298,6 +311,12 @@ body {
 .blog-list-widget{
     width: 550px; 
     height: 200px;
+
+}
+
+.sidebar{
+    margin-top: -130%;
+    margin-left: 60%;
 }
 /*---News End---*/
 
@@ -430,8 +449,6 @@ section .section-title {
     border-radius: 50%;
 }
 
-
-
 .aoe-title{
   text-transform: uppercase;
       text-align: center;
@@ -453,7 +470,7 @@ section .section-title {
 .testimonials-section{
 padding: 50px 0px 50px 0px;
   
-background-image: url(https://www.oekonews.at/mmedia/16.12.2018/1544915215_5.jpg);
+background-image: url(https://www.hdwallpapers.in/download/hd_desktop_blue-wide.jpg);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -507,9 +524,9 @@ min-height: 290px;
 }
 
 .carousel-title{
-  margin: 25px;
-  color: #000;
-   font-size: 2em;
+    margin: 25px;
+    color: #000;
+    font-size: 2em;
 }
 
 .carousel-line{
@@ -525,7 +542,7 @@ min-height: 290px;
 }
 
 .carousel .overview b {
-  color: #7AA641;
+  color: #000;
   font-size: 1.3em;
 }
 
@@ -601,13 +618,24 @@ min-height: 290px;
     font-weight: bolder;
 }
 
+/*----iFrame text---*/
 
-.loc{
-    font-size: 2em;
-    margin-left: 45%;
-    margin-bottom: 25px;
+
+h6 {
+    font-weight: bold;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.6rem;
+    color: #4682B4;
 }
 
+
+/*Footer*/
 
 
 .footerA{
@@ -615,19 +643,150 @@ min-height: 290px;
 }
 
 #footerC{
-    background-color: grey;
-    height: auto;
+    background-color: #4682B4;
+    height: 340px;
 }
 
-h5{
+.footerE{
+    color: #000;
+
+}
+
+.foo2{
     font-size: 1.3em;
-    color: blue;
+    color:white;
+    margin-top: 40px;
 }
 
+.foo{
+    font-size: 5em;
+}
 
 .footerT{
     color: white;
 }
 
+/*----3D-Box----*/
 
 
+.box-two{
+    transform: translateZ(0);
+    top: 20%;
+    left:0;
+    right:0;
+    bottom:0;
+    mix-blend-mode:screen;
+}
+
+.box-one{
+   transform: translateZ(0);
+    top: 20%;
+    left:0;
+    right:0;
+    bottom:0;
+    transform: scale(0.6);
+}
+
+.box-one, .box-two{
+    perspective: 600;
+    margin: -200px 0 0 -200px;
+    width: 400px;
+    height: 400px;
+    margin-left: 85%;
+    margin-top: -10%;
+}
+
+.box-two:before,
+.box-two:after,
+.box-one:before,
+.box-one:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-background-size:800%;
+    background-size: 800%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform-origin: 50% 50% -200px;
+    animation-duration: 4s;  
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
+    background: linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);
+}
+
+.box-two:before,
+.box-one:before{
+    animation-name: animate1;
+}
+
+.box-two:after,
+.box-one:after{
+    animation-name: animate2;
+}
+
+.box-one:before,
+.box-one:after{
+    background: url(https://www.xing.com/img/custom/events/events_files/1/1/6/2183446/c56329d04d0521c2700e5bda873d7657c9e7f3e4/square256/e4f_logo.jpg?1568103118);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+}
+@keyframes animate1{
+    from{
+        transform: rotateY(0);
+        background-position: 0 0;
+    }
+    to{
+        transform: rotateY(-90deg);
+        background-position: -400% 0;
+    }
+}
+
+@keyframes animate2{
+    from{
+        transform: rotateY(90deg);
+        background-position: 400% 0;
+    }
+    to{
+        transform: rotateY(0);
+        background-position: 0 0;
+    }
+}
+
+
+
+
+
+.circle{
+    position: relative;
+    overflow: hidden;
+}
+
+.circle img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle.circle1{
+    width: 500px;
+    height: 500px;
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+    shape-outside:circle(); 
+}
+.circle.circle2{
+    width: 300px;
+    height: 300px;
+    float: right;
+    border-radius: 50%;
+    margin: 40px;
+    shape-outside:circle(); 
+}
