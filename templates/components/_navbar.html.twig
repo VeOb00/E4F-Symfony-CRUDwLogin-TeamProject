@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="/">Navbar</a>
+<a href="" class="navbar-brand" style="color:white; margin-left: 150px;">Entrepeneurs 4 Future</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="nav navbar-nav navbar-right" style="margin-left:800px;">
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
@@ -43,8 +43,6 @@
             {# <li class="nav-item"> #}
             {# <a class="nav-link disabled" href="#">Disabled</a> #}
             {# </li> #}
-        </ul>
-        <ul class="navbar-nav ml-auto">
             {% if app.user %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('admin') }}">Admin Panel</a>
