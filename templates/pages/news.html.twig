@@ -4,28 +4,44 @@
 {% block pagetitle %}News &amp; Updates{% endblock %}
 {% block pagesubtitle %}{% endblock %}
 
-{% block body %}
-    <br>
-    hello from the newspage
-    <br>
-    i will hold all the blogposts/ A news feed where we can put news, updates, current (strike) dates...
-    <br>
 
+{% block body %}
+   
     <div class="row">
 
         <div class="col-lg-8">
-            <h3>Hello from news, updates</h3>
-            {% for post in postNews %}
-                <div class="col-md-6 col-lg-4 mb-5 ">
-                    <img src="{{ post.imagemain }}" alt="">
-                    <h3>{{ post.title }}</h3>
-                    <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a>
-                </div>
+            <br>
+
+            <div class="blog-list clearfix">
+
+            {% for post in postNews %}                    
+                <div class="blog-box row">
+                    <div class="col-md-4">
+                        <div class="post-media">
+                            <a href="tech-single.html" title="">
+                            <img src="{{ asset('assets/img/Anreg.jpg') }} {{post.imageMain}}" alt="" class="img-fluid">
+                            <div class="hovereffect"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-meta big-meta col-md-8">
+                        <h4><a href="news/{{post.id}}" title="">{{post.title}}</a></h4>
+                            <p>{{post.outroText }}</p>
+                          
+                            <small>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</small>
+                            <small>by {{post.authorFn}}</small>
+                    </div>
+                </div><br>
+
+                <hr class="invis">
             {% else %}
                 <div>
                     <p>no records found</p>
                 </div>
             {% endfor %}
+                
+            </div>
         </div>
 
         <div class="col-lg-3">
