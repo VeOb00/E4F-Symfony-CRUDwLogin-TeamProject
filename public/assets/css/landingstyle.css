@@ -9,11 +9,11 @@ body {
 
 
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/*.navbar {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
 
 .hero {
     background-image: linear-gradient(0deg, rgba(1,8,124,0.6), rgba(0, 0, 0, 0.0)), url("../img/bg.png");
@@ -27,47 +27,47 @@ body {
 
 
 
-.navbar-brand{
-    font-size: 1.5em;
-    color: white;
-}
+/*.navbar-brand{*/
+/*    font-size: 1.5em;*/
+/*    color: white;*/
+/*}*/
 
-.navbar{
-    padding: 22px 6px;
-    border-bottom: none !important;
-    transition: all 0.5s ease-in-out;
-}
+/*.navbar{*/
+/*    padding: 22px 6px;*/
+/*    border-bottom: none !important;*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
 
-.navbar-inverse{
-    background-color: #4682B4!important;
-}
+/*.navbar-inverse{*/
+/*    background-color: #4682B4!important;*/
+/*}*/
 
-.navbar ul li a{
-    color: white !important;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 16px;
-    transition: all 0.5s ease-in;
-}
+/*.navbar ul li a{*/
+/*    color: white !important;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 700;*/
+/*    letter-spacing: 1px;*/
+/*    font-size: 16px;*/
+/*    transition: all 0.5s ease-in;*/
+/*}*/
 
-.navbar ul li a:hover{
-    color: deepskyblue !important;
+/*.navbar ul li a:hover{*/
+/*    color: deepskyblue !important;*/
 
-}
+/*}*/
 
-.navbar-toggle{
-    border: 1px solid white !important;
-    transition: all 0.5s ease-in;
-}
+/*.navbar-toggle{*/
+/*    border: 1px solid white !important;*/
+/*    transition: all 0.5s ease-in;*/
+/*}*/
 
-.navbar-toggle:hover{
-    background-color: deepskyblue !important;
-}
+/*.navbar-toggle:hover{*/
+/*    background-color: deepskyblue !important;*/
+/*}*/
 
-.navbar-inverse .navbar-collapse{
-    border-color: transparent !important;
-} 
+/*.navbar-inverse .navbar-collapse{*/
+/*    border-color: transparent !important;*/
+/*} */
 
 .location{
     border: 1px solid white;
@@ -660,33 +660,33 @@ h6 {
 /*Footer*/
 
 
-.footerA{
-    font-size: 1em;
-}
+/*.footerA{*/
+/*    font-size: 1em;*/
+/*}*/
 
-#footerC{
-    background-color: #4682B4;
-    height: 340px;
-}
+/*#footerC{*/
+/*    background-color: #4682B4;*/
+/*    height: 340px;*/
+/*}*/
 
-.footerE{
-    color: #000;
+/*.footerE{*/
+/*    color: #000;*/
 
-}
+/*}*/
 
-.foo2{
-    font-size: 1.3em;
-    color:white;
-    margin-top: 40px;
-}
+/*.foo2{*/
+/*    font-size: 1.3em;*/
+/*    color:white;*/
+/*    margin-top: 40px;*/
+/*}*/
 
-.foo{
-    font-size: 5em;
-}
+/*.foo{*/
+/*    font-size: 5em;*/
+/*}*/
 
-.footerT{
-    color: white;
-}
+/*.footerT{*/
+/*    color: white;*/
+/*}*/
 
 /*----3D-Box----*/
 

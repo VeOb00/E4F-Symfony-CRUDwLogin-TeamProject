@@ -33,13 +33,21 @@ nav {
 
 footer {
     margin-top: 5rem;
+    background-color: #4682B4;
+    /*background: -webkit-linear-gradient(-130deg, #4682B4, #4682B4, #4682B4);*/
+    /*background: linear-gradient(-130deg, #4682B4, #4682B4, #4682B4);*/
+    background-image: url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer a {
-    color: darkgray !important;
+    color: rgb(9, 36, 59) !important;
 }
 
 footer a:hover {
     text-decoration: none;
-    color: rgb(217,83,79) !important;
+    /*color: rgb(23,162,184) !important;*/
+    color: navy !important;
 }
