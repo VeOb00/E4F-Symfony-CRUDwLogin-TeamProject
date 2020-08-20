@@ -23,9 +23,7 @@ body {
     padding: 0 1rem;
 }
 
-#navi {
-    display:flex;
-}
+
 
 .navbar-brand{
     font-size: 1.5em;
@@ -812,3 +810,8 @@ h6 {
     margin: 40px;
     shape-outside:circle(); 
 }
+
+
+
+
+
