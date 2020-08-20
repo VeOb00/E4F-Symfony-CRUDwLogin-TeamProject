@@ -25,7 +25,7 @@ class PostRepository extends ServiceEntityRepository
             'SELECT p
             FROM  App\Entity\Post p
             WHERE p.postType = :type
-            ORDER BY p.datePublished ASC'
+            ORDER BY p.datePublished DESC'
         )->setParameter('type', $type);
 
         // returns an array of Product objects

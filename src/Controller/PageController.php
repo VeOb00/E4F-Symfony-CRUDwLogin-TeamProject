@@ -37,11 +37,8 @@ class PageController extends AbstractController
      */
     public function indexNews(PostRepository $postsRepository): Response
     {
-        $type = 'news';
-        $postNews = $postsRepository->findAllByType($type);
-        $type = 'strike';
-        $postStrike = $postsRepository->findAllByType($type);
-
+        $postNews = $postsRepository->findAllByType('news');
+        $postStrike = $postsRepository->findAllByType('strike');
 
         return $this->render('pages/news.html.twig', [
             'postNews' => $postNews,

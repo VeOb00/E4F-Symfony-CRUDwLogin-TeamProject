@@ -16,11 +16,20 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="193dd220-6068-4b43-b7eb-d4da8bb12f18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +173,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -201,7 +210,9 @@
       <workItem from="1597648506789" duration="28810000" />
       <workItem from="1597682182453" duration="1336000" />
       <workItem from="1597736216938" duration="24384000" />
-      <workItem from="1597821724073" duration="23758000" />
+      <workItem from="1597821724073" duration="24275000" />
+      <workItem from="1597860281569" duration="2225000" />
+      <workItem from="1597903893578" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1597315684701</created>
@@ -248,7 +259,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -298,6 +309,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="640" y="459" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597247358373" />
+    <state x="92" y="92" width="1736" height="986" key="DiffContextDialog" timestamp="1597862522879">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="92" y="92" width="1736" height="986" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597862522879" />
     <state width="1293" height="232" key="GridCell.Tab.0.bottom" timestamp="1597324400920">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
@@ -330,10 +345,10 @@
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
     <state x="589" y="308" key="NewPhpClassDialog/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597336840152" />
-    <state x="461" y="230" key="SettingsEditor" timestamp="1597682311554">
+    <state x="461" y="230" key="SettingsEditor" timestamp="1597862287964">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
-    <state x="461" y="230" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597682311554" />
+    <state x="461" y="230" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1170@0.0.1920.1170" timestamp="1597862287964" />
     <state x="777" y="499" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597340362288">
       <screen x="0" y="0" width="1920" height="1170" />
     </state>
