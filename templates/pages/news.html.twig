@@ -1,65 +1,113 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
 
+{# {% block title %}News{% endblock %} #}
+{# {% block pagetitle %}News &amp; Updates{% endblock %} #}
+{# {% block pagesubtitle %}{% endblock %} #}
+
+
+{# {% block body %} #}
+{# #}
+{# <div class="row"> #}
+
+{# <div class="col-lg-8"> #}
+{# <br> #}
+
+{# <div class="blog-list clearfix"> #}
+
+{# {% for post in postNews %} #}
+{# <div class="blog-box row"> #}
+{# <div class="col-md-4"> #}
+{# <div class="post-media"> #}
+{# #}
+{# <img src="{{ asset('assets/img/Anreg.jpg') }}" alt="" class="img-fluid"> #}
+{# <div class="hovereffect"></div> #}
+{# </a> #}
+{# </div> #}
+{# </div> #}
+
+{# <div class="blog-meta big-meta col-md-8"> #}
+{# <h4><a href="news/{{post.id}}" title="">{{post.title}}</a></h4> #}
+{# <p>{{post.outroText }}</p> #}
+{# #}
+{# <small>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</small> #}
+{# <small>by {{post.authorFn}}</small> #}
+{# </div> #}
+{# </div><br> #}
+
+{# <hr class="invis"> #}
+{# {% else %} #}
+{# <div> #}
+{# <p>no records found</p> #}
+{# </div> #}
+{# {% endfor %} #}
+{# #}
+{# </div> #}
+{# </div> #}
+
+{# <div class="col-lg-3"> #}
+{# <h3>Hello from the strike dates</h3> #}
+{# <hr> #}
+{# {% for post in postStrike %} #}
+{# <div class=""> #}
+{# <img src="{{ post.imagemain }}" alt=""> #}
+{# <h3>{{ post.title }}</h3> #}
+{# <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a> #}
+{# </div> #}
+{# {% else %} #}
+{# <div> #}
+{# <p>no records found</p> #}
+{# </div> #}
+{# {% endfor %} #}
+{# </div> #}
+
+{# </div> #}
+
+{# {% endblock %} #}
+
+{% extends 'base.html.twig' %}
 {% block title %}News{% endblock %}
 {% block pagetitle %}News &amp; Updates{% endblock %}
 {% block pagesubtitle %}{% endblock %}
-
-
 {% block body %}
-   
-    <div class="row">
-
-        <div class="col-lg-8">
-            <br>
-
-            <div class="blog-list clearfix">
-
-            {% for post in postNews %}                    
-                <div class="blog-box row">
-                    <div class="col-md-4">
-                        <div class="post-media">
-                            
-                            <img src="{{ asset('assets/img/Anreg.jpg') }}" alt="" class="img-fluid">
-                            <div class="hovereffect"></div>
-                            </a>
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="display-3">Latest News</h3>
+                <br>
+                {% for post in postNews %}
+                    <div class="card w-75" style="">
+                        <img class="card-img-top" src="{{ post.imagemain }}" style="" alt="">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More
+                                info</small></a>
                     </div>
-
-                    <div class="blog-meta big-meta col-md-8">
-                        <h4><a href="news/{{post.id}}" title="">{{post.title}}</a></h4>
-                            <p>{{post.outroText }}</p>
-                          
-                            <small>{{ post.datePublished ? post.datePublished|date('Y-m-d') : '' }}</small>
-                            <small>by {{post.authorFn}}</small>
+                    <br>
+                {% else %}
+                    <div>
+                        <p>no records found</p>
                     </div>
-                </div><br>
+                {% endfor %}
+            </div>
 
-                <hr class="invis">
-            {% else %}
-                <div>
-                    <p>no records found</p>
-                </div>
-            {% endfor %}
-                
+            <div class="col-lg-3">
+                <h3>Current strikes and dates</h3>
+                <hr>
+                {% for post in postStrike %}
+                    <div class="my-4">
+                        <img src="{{ post.imagemain }}" class="w-100" alt="">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More
+                                info</small></a>
+                    </div>
+                {% else %}
+                    <div>
+                        <p>no records found</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
-
-        <div class="col-lg-3">
-            <h3>Hello from the strike dates</h3>
-            <hr>
-            {% for post in postStrike %}
-                <div class="">
-{#                    <img src="{{ post.imagemain }}" alt="">#}
-                    <h3>{{ post.title }}</h3>
-                    <a href="{{ path('news_show', {'id': post.id}) }}"><small class="text-muted">More info</small></a>
-                </div>
-            {% else %}
-                <div>
-                    <p>no records found</p>
-                </div>
-            {% endfor %}
-        </div>
-
     </div>
 
 {% endblock %}
